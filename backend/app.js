@@ -18,7 +18,7 @@ const teaSchema = new mongoose.Schema({
     id: Number,
     name: String,
     ingredients: String,
-    type: String,
+    type: [],
     price_per_100g: Number,
     temperature: String,
     country: String,
