@@ -1,8 +1,16 @@
+import { useDispatch } from "react-redux"
+import { setTag } from "../assets/searchSlice"
+
+
 function SearchTag({text, tag})
 {
-    //add redux handling here
+    const dispatch = useDispatch();
     return( 
-        <p>{text}</p>
+        <p className="text-center">
+            <a onClick={() => dispatch(setTag(tag))} type="button">
+                {text}
+            </a>
+        </p>
     )
 }
 
