@@ -135,7 +135,7 @@ function NavBar() {
 
                                 <div className="container-fluid row p-3">
                                     <div className="col-12">
-                                        <h3><SearchTag text={"AKCESORIA"} tag={"AKCESORIA "} /></h3>
+                                        <h3><SearchTag text={"AKCESORIA"} tag={"AKCESORIA"} /></h3>
                                     </div>
                                     <div className="col-lg-4 col-12">
                                         <SearchTag text={"DZBANKI DO HERBATY"} tag={"DZBANKI_DO_HERBATY"} />
