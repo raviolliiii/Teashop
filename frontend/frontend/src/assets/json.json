@@ -1,0 +1,1719 @@
+[
+    {
+        "id": 1,
+        "name": "Earl Grey Supreme",
+        "ingredients": "Czarna herbata, olejek bergamotowy",
+        "tags": [
+            "HERBATA",
+            "HERBATA_KLASYCZNA",
+            "HERBATA_CZARNA"
+        ],
+        "price": 15.99,
+        "temperature": 95,
+        "country": "Indie",
+        "description": "Wyjątkowa czarna herbata Earl Grey, której głęboki aromat i smak pochodzi z najwyższej jakości liści oraz olejku bergamotowego. Idealna do porannego orzeźwienia i popołudniowego relaksu. Doskonale komponuje się z cytryną lub mlekiem. Każda filiżanka przenosi Cię w zmysłową podróż do egzotycznych Indii."
+    },
+    {
+        "id": 2,
+        "name": "Zielona Jaśminowa Harmonia",
+        "ingredients": "Zielona herbata, kwiaty jaśminu",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_ZIELONA_Z_DODATKAMI"
+        ],
+        "price": 18.99,
+        "temperature": 80,
+        "country": "Chiny",
+        "description": "Kunsztownie skomponowana zielona herbata z kwiatami jaśminu, oferująca łagodny, a zarazem bogaty aromat. Idealna na relaksujące wieczory, pomaga zredukować stres i wprowadza w stan ukojenia. Wyjątkowo delikatny smak, który łączy tradycję z nowoczesnością, czyniąc każdą filiżankę prawdziwym dziełem sztuki."
+    },
+    {
+        "id": 3,
+        "name": "Pure Rooibos Delight",
+        "ingredients": "Rooibos",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "ROOIBOS"
+        ],
+        "price": 12.50,
+        "temperature": 90,
+        "country": "RPA",
+        "description": "Naturalna, czerwona herbata rooibos o delikatnym, słodkawym smaku bez kofeiny, co czyni ją idealnym wyborem na wieczór. Pozyskiwana z najlepszych plantacji w Republice Południowej Afryki, oferuje bogactwo antyoksydantów i korzyści zdrowotnych. Doskonała na ciepło, jak i na zimno, w każdej chwili dnia."
+    },
+    {
+        "id": 4,
+        "name": "Oolong Ginseng Bliss",
+        "ingredients": "Herbata oolong, żeń-szeń",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_OOLONG_Z_DODATKAMI"
+        ],
+        "price": 22.00,
+        "temperature": 85,
+        "country": "Tajwan",
+        "description": "Ekskluzywna herbata oolong wzbogacona o żeń-szeń, oferująca unikalny, złożony smak i aromat. Ta herbata jest idealna dla miłośników herbaty, którzy szukają czegoś niezwykłego. Znakomicie balansuje tradycyjny smak oolonga z lekko słodkim i pikantnym akcentem żeń-szenia, co czyni ją niezapomnianym doświadczeniem."
+    },
+    {
+        "id": 5,
+        "name": "Matcha Zen Bliss",
+        "ingredients": "Matcha",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "MATCHA"
+        ],
+        "price": 30.00,
+        "temperature": 70,
+        "country": "Japonia",
+        "description": "Wyrafinowana japońska matcha, której delikatny smak i bogaty zielony kolor pochodzą z najwyższej jakości liści herbacianych. Idealna do tradycyjnych ceremonii herbacianych oraz nowoczesnych przepisów. Pijąc matchę, wchodzisz w stan zen i wewnętrznego spokoju."
+    },
+    {
+        "id": 6,
+        "name": "Himalaya Chai",
+        "ingredients": "Czarna herbata, cynamon, kardamon, imbir, goździki, pieprz czarny",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_CZARNA_Z_DODATKAMI"
+        ],
+        "price": 20.00,
+        "temperature": 95,
+        "country": "Indie",
+        "description": "Aromatyczna herbata chai prosto z Himalajów, skomponowana z mieszanki przypraw takich jak cynamon, kardamon, imbir, goździki i czarny pieprz. Oferuje rozgrzewający i pełen aromatu napój, idealny na zimowe wieczory."
+    },
+    {
+        "id": 7,
+        "name": "Yerba Mate Energy",
+        "ingredients": "Yerba mate",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "YERBA_MATE"
+        ],
+        "price": 18.00,
+        "temperature": 80,
+        "country": "Argentyna",
+        "description": "Tradycyjna yerba mate z Argentyny, oferująca naturalne pobudzenie dzięki wysokiej zawartości kofeiny. Pijana w specjalnym naczyniu, bombilli, yerba mate jest symbolem wspólnoty i spotkań towarzyskich."
+    },
+    {
+        "id": 8,
+        "name": "White Peony",
+        "ingredients": "Biała herbata",
+        "tags": [
+            "HERBATA",
+            "HERBATA_KLASYCZNA",
+            "HERBATA_BIALA"
+        ],
+        "price": 25.00,
+        "temperature": 85,
+        "country": "Chiny",
+        "description": "Delikatna i elegancka biała herbata z prowincji Fujian w Chinach, znana z subtelnego smaku i delikatnego aromatu. Idealna na chwile relaksu i medytacji."
+    },
+    {
+        "id": 9,
+        "name": "Tropical Fruit Symphony",
+        "ingredients": "Jabłko, hibiskus, skórka pomarańczowa, truskawka, ananas",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "KOMPOZYCJA_OWOCOWA"
+        ],
+        "price": 17.00,
+        "temperature": 100,
+        "country": "Hiszpania",
+        "description": "Pyszna kompozycja owocowa z jabłkiem, hibiskusem, skórką pomarańczową, truskawką i ananasem. Idealna na ciepło i na zimno, oferuje orzeźwiający i owocowy smak pełen witamin."
+    },
+    {
+        "id": 10,
+        "name": "Ceylon Breakfast",
+        "ingredients": "Czarna herbata",
+        "tags": [
+            "HERBATA",
+            "HERBATA_KLASYCZNA",
+            "HERBATA_CZARNA"
+        ],
+        "price": 12.99,
+        "temperature": 95,
+        "country": "Sri Lanka",
+        "description": "Tradycyjna czarna herbata z Cejlonu, znana z mocnego i wyrazistego smaku. Idealna do śniadania, doskonale komponuje się z mlekiem lub cytryną, zapewniając energetyczny start dnia."
+    },
+    {
+        "id": 11,
+        "name": "Pu-erh Imperial",
+        "ingredients": "Pu-erh",
+        "tags": [
+            "HERBATA",
+            "HERBATA_KLASYCZNA",
+            "HERBATA_PU_ERH"
+        ],
+        "price": 28.00,
+        "temperature": 95,
+        "country": "Chiny",
+        "description": "Ekskluzywna herbata pu-erh z prowincji Yunnan, oferująca głęboki, ziemisty smak i bogaty aromat. Znana ze swoich właściwości zdrowotnych, wspomagających trawienie i redukcję cholesterolu."
+    },
+    {
+        "id": 12,
+        "name": "Mint Refresh",
+        "ingredients": "Zielona herbata, mięta pieprzowa",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_ZIELONA_Z_DODATKAMI"
+        ],
+        "price": 16.50,
+        "temperature": 80,
+        "country": "Maroko",
+        "description": "Odświeżająca zielona herbata z dodatkiem mięty pieprzowej, inspirowana tradycyjnymi marokańskrskiej gościnności. Idealna na letnie popołudnia, orzeźwiająca i pełna smaku."
+    },
+    {
+        "id": 13,
+        "name": "Citrus Detox",
+        "ingredients": "Biała herbata, skórka cytryny, trawa cytrynowa, imbir",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_BIALA_Z_DODATKAMI"
+        ],
+        "price": 24.00,
+        "temperature": 85,
+        "country": "Chiny",
+        "description": "Detoksykacyjna mieszanka białej herbaty z dodatkiem skórki cytryny, trawy cytrynowej i imbiru. Doskonale orzeźwiająca i wspomagająca naturalne procesy oczyszczania organizmu. Idealna do picia na ciepło lub na zimno."
+    },
+    {
+        "id": 14,
+        "name": "Rooibos Vanilla Dream",
+        "ingredients": "Rooibos, wanilia",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "ROOIBOS"
+        ],
+        "price": 14.50,
+        "temperature": 90,
+        "country": "RPA",
+        "description": "Łagodna i słodka herbata rooibos z dodatkiem wanilii, oferująca aksamitny smak i przyjemny aromat. Bez kofeiny, idealna na relaksujące wieczory. Pochodzi z najlepszych plantacji w Republice Południowej Afryki."
+    },
+    {
+        "id": 15,
+        "name": "Spicy Masala Chai",
+        "ingredients": "Czarna herbata, cynamon, kardamon, goździki, imbir, pieprz czarny",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_CZARNA_Z_DODATKAMI"
+        ],
+        "price": 20.50,
+        "temperature": 95,
+        "country": "Indie",
+        "description": "Intensywnie aromatyczna herbata masala chai, skomponowana z mieszanki czarnej herbaty i przypraw takich jak cynamon, kardamon, goździki, imbir i pieprz czarny. Oferuje rozgrzewający i pełen aromatu napój, idealny na zimowe wieczory."
+    },
+    {
+        "id": 16,
+        "name": "Golden Turmeric Blend",
+        "ingredients": "Zielona herbata, kurkuma, imbir, cynamon, miód",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_ZIELONA_Z_DODATKAMI"
+        ],
+        "price": 19.00,
+        "temperature": 80,
+        "country": "Indie",
+        "description": "Unikalna mieszanka zielonej herbaty z kurkumą, imbirem, cynamonem i miodem. Doskonale rozgrzewająca i pełna zdrowotnych właściwości, wspomaga odporność i działa przeciwzapalnie. Idealna na chłodne dni."
+    },
+    {
+        "id": 17,
+        "name": "Lavender Calm",
+        "ingredients": "Biała herbata, lawenda, rumianek",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_BIALA_Z_DODATKAMI"
+        ],
+        "price": 21.00,
+        "temperature": 85,
+        "country": "Francja",
+        "description": "Delikatna mieszanka białej herbaty z lawendą i rumiankiem, idealna na wieczorny relaks. Łączy łagodny smak herbaty z kojącym aromatem lawendy, wprowadzając w stan ukojenia i spokoju. Idealna na koniec dnia."
+    },
+    {
+        "id": 18,
+        "name": "Berry Delight",
+        "ingredients": "Herbata owocowa, malina, truskawka, hibiskus",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "KOMPOZYCJA_OWOCOWA"
+        ],
+        "price": 17.50,
+        "temperature": 100,
+        "country": "Polska",
+        "description": "Pyszna herbata owocowa z dodatkiem malin, truskawek i hibiskusa. Oferuje intensywny, owocowy smak, idealny na ciepło i na zimno. Doskonała na każdą porę dnia, pełna witamin i antyoksydantów."
+    },
+    {
+        "id": 19,
+        "name": "Chamomile Serenity",
+        "ingredients": "Rumianek",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 12.00,
+        "temperature": 100,
+        "country": "Niemcy",
+        "description": "Kojąca herbata rumiankowa, znana ze swoich właściwości relaksujących i uspokajających. Idealna na wieczór, pomaga w zasypianiu i redukcji stresu. Naturalny smak rumianku, bez dodatków."
+    },
+    {
+        "id": 20,
+        "name": "Vanilla Rooibos Dream",
+        "ingredients": "Rooibos, wanilia",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "ROOIBOS"
+        ],
+        "price": 14.50,
+        "temperature": 90,
+        "country": "RPA",
+        "description": "Łagodna i słodka herbata rooibos z dodatkiem wanilii, oferująca aksamitny smak i przyjemny aromat. Bez kofeiny, idealna na relaksujące wieczory. Pochodzi z najlepszych plantacji w Republice Południowej Afryki."
+    },
+    {
+        "id": 21,
+        "name": "Golden Yunnan",
+        "ingredients": "Czarna herbata",
+        "tags": [
+            "HERBATA",
+            "HERBATA_KLASYCZNA",
+            "HERBATA_CZARNA"
+        ],
+        "price": 20.00,
+        "temperature": 95,
+        "country": "Chiny",
+        "description": "Aromatyczna herbata z prowincji Yunnan, o bogatym, miodowym smaku i złocistym naparze. Idealna na poranne przebudzenie oraz spokojne popołudnie."
+    },
+    {
+        "id": 22,
+        "name": "Sencha Green Delight",
+        "ingredients": "Zielona herbata",
+        "tags": [
+            "HERBATA",
+            "HERBATA_KLASYCZNA",
+            "HERBATA_ZIELONA"
+        ],
+        "price": 17.50,
+        "temperature": 75,
+        "country": "Japonia",
+        "description": "Klasyczna japońska herbata sencha, znana z jasnozielonego naparu i delikatnego, świeżego smaku. Doskonała do codziennego picia i wspomagania zdrowego stylu życia."
+    },
+    {
+        "id": 23,
+        "name": "Hibiscus Berry Burst",
+        "ingredients": "Hibiskus, czarna porzeczka, dzika róża, jagody",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "KOMPOZYCJA_OWOCOWA"
+        ],
+        "price": 16.00,
+        "temperature": 100,
+        "country": "Egipt",
+        "description": "Orzeźwiająca kompozycja z hibiskusa i jagód, pełna witamin i antyoksydantów. Idealna do picia na gorąco i na zimno, doskonała na każdą porę roku."
+    },
+    {
+        "id": 24,
+        "name": "Assam Royal Breakfast",
+        "ingredients": "Czarna herbata",
+        "tags": [
+            "HERBATA",
+            "HERBATA_KLASYCZNA",
+            "HERBATA_CZARNA"
+        ],
+        "price": 15.00,
+        "temperature": 95,
+        "country": "Indie",
+        "description": "Mocna i bogata czarna herbata Assam, doskonała do śniadania. Pochodząca z regionu Assam w Indiach, znana z pełnego smaku i głębokiego aromatu."
+    },
+    {
+        "id": 25,
+        "name": "Minty Fresh",
+        "ingredients": "Zielona herbata, mięta",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_ZIELONA_Z_DODATKAMI"
+        ],
+        "price": 14.00,
+        "temperature": 80,
+        "country": "Maroko",
+        "description": "Odświeżająca zielona herbata z dodatkiem mięty, inspirowana tradycją marokańską. Idealna na gorące dni, doskonale chłodzi i orzeźwia."
+    },
+    {
+        "id": 26,
+        "name": "Ginger Spice",
+        "ingredients": "Herbata oolong, imbir, cynamon",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_OOLONG_Z_DODATKAMI"
+        ],
+        "price": 19.50,
+        "temperature": 85,
+        "country": "Tajwan",
+        "description": "Aromatyczna mieszanka herbaty oolong z imbirem i cynamonem, oferująca ciepły, pikantny smak. Idealna na chłodne dni, dodaje energii i rozgrzewa."
+    },
+    {
+        "id": 27,
+        "name": "Citrus Green Tea",
+        "ingredients": "Zielona herbata, skórka cytryny, trawa cytrynowa",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_ZIELONA_Z_DODATKAMI"
+        ],
+        "price": 18.00,
+        "temperature": 80,
+        "country": "Chiny",
+        "description": "Odświeżająca zielona herbata z cytrusowymi nutami skórki cytryny i trawy cytrynowej. Doskonała na ciepło i na zimno, pełna witaminy C."
+    },
+    {
+        "id": 28,
+        "name": "Berry Infusion",
+        "ingredients": "Truskawki, maliny, jagody",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "KOMPOZYCJA_OWOCOWA"
+        ],
+        "price": 17.00,
+        "temperature": 100,
+        "country": "Polska",
+        "description": "Pyszna herbata owocowa z truskawkami, malinami i jagodami. Oferuje intensywny owocowy smak, idealny na gorąco i na zimno. Doskonała na każdą porę dnia."
+    },
+    {
+        "id": 29,
+        "name": "Herbata Pu-erh Ginseng",
+        "ingredients": "Pu-erh, żeń-szeń",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_PU_ERH_Z_DODATKAMI"
+        ],
+        "price": 26.00,
+        "temperature": 95,
+        "country": "Chiny",
+        "description": "Unikalna mieszanka herbaty pu-erh z dodatkiem żeń-szenia, oferująca głęboki, ziemisty smak i bogaty aromat. Znakomita do wspomagania trawienia i ogólnej witalności."
+    },
+    {
+        "id": 30,
+        "name": "Chamomile Lavender Sleep",
+        "ingredients": "Rumianek, lawenda",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 13.50,
+        "temperature": 100,
+        "country": "Francja",
+        "description": "Kojąca mieszanka rumianku i lawendy, idealna na wieczorny relaks i zdrowy sen. Łączy delikatny smak rumianku z aromatem lawendy, wprowadzając w stan ukojenia."
+    },
+    {
+        "id": 31,
+        "name": "Golden Assam",
+        "ingredients": "Czarna herbata",
+        "tags": [
+            "HERBATA",
+            "HERBATA_KLASYCZNA",
+            "HERBATA_CZARNA"
+        ],
+        "price": 20.00,
+        "temperature": 95,
+        "country": "Indie",
+        "description": "Luksusowa herbata z regionu Assam w Indiach, znana z bogatego, miodowego smaku i intensywnego naparu. Idealna do porannego przebudzenia oraz spokojnego popołudnia."
+    },
+    {
+        "id": 32,
+        "name": "Emerald Matcha",
+        "ingredients": "Matcha",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "MATCHA"
+        ],
+        "price": 22.50,
+        "temperature": 70,
+        "country": "Japonia",
+        "description": "Ekskluzywna japońska matcha, której intensywny zielony kolor i delikatny smak pochodzą z najwyższej jakości liści herbacianych. Idealna do ceremonii herbacianych oraz nowoczesnych przepisów."
+    },
+    {
+        "id": 33,
+        "name": "Berry Bliss",
+        "ingredients": "Hibiskus, czarna porzeczka, dzika róża, jagody",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "KOMPOZYCJA_OWOCOWA"
+        ],
+        "price": 16.00,
+        "temperature": 100,
+        "country": "Egipt",
+        "description": "Orzeźwiająca kompozycja z hibiskusa i jagód, pełna witamin i antyoksydantów. Idealna do picia na gorąco i na zimno, doskonała na każdą porę roku."
+    },
+    {
+        "id": 34,
+        "name": "Jasmine Pearl Harmony",
+        "ingredients": "Zielona herbata, kwiaty jaśminu",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_ZIELONA_Z_DODATKAMI"
+        ],
+        "price": 18.00,
+        "temperature": 80,
+        "country": "Chiny",
+        "description": "Kunsztownie skomponowana zielona herbata z ręcznie zwiniętymi perłami jaśminu, oferująca łagodny, a zarazem bogaty aromat. Idealna na relaksujące wieczory."
+    },
+    {
+        "id": 35,
+        "name": "Mint Medley",
+        "ingredients": "Zielona herbata, mięta pieprzowa, mięta zielona",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_ZIELONA_Z_DODATKAMI"
+        ],
+        "price": 14.00,
+        "temperature": 80,
+        "country": "Maroko",
+        "description": "Odświeżająca zielona herbata z dodatkiem mięty pieprzowej i mięty zielonej, inspirowana tradycją marokańską. Idealna na gorące dni, doskonale chłodzi i orzeźwia."
+    },
+    {
+        "id": 36,
+        "name": "Ginger Turmeric Elixir",
+        "ingredients": "Herbata oolong, imbir, kurkuma",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_OOLONG_Z_DODATKAMI"
+        ],
+        "price": 19.50,
+        "temperature": 85,
+        "country": "Tajwan",
+        "description": "Aromatyczna mieszanka herbaty oolong z imbirem i kurkumą, oferująca ciepły, pikantny smak. Idealna na chłodne dni, dodaje energii i rozgrzewa."
+    },
+    {
+        "id": 37,
+        "name": "Lemon Green Twist",
+        "ingredients": "Zielona herbata, skórka cytryny, trawa cytrynowa",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_ZIELONA_Z_DODATKAMI"
+        ],
+        "price": 18.00,
+        "temperature": 80,
+        "country": "Chiny",
+        "description": "Odświeżająca zielona herbata z cytrusowymi nutami skórki cytryny i trawy cytrynowej. Doskonała na ciepło i na zimno, pełna witaminy C."
+    },
+    {
+        "id": 38,
+        "name": "Fruit Berry Infusion",
+        "ingredients": "Herbata owocowa, truskawki, maliny, jagody",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "KOMPOZYCJA_OWOCOWA"
+        ],
+        "price": 17.00,
+        "temperature": 100,
+        "country": "Polska",
+        "description": "Pyszna herbata owocowa z truskawkami, malinami i jagodami. Oferuje intensywny owocowy smak, idealny na gorąco i na zimno. Doskonała na każdą porę dnia."
+    },
+    {
+        "id": 39,
+        "name": "Pu-erh Ginger Spice",
+        "ingredients": "Pu-erh, imbir",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_PU_ERH_Z_DODATKAMI"
+        ],
+        "price": 26.00,
+        "temperature": 95,
+        "country": "Chiny",
+        "description": "Unikalna mieszanka herbaty pu-erh z dodatkiem imbiru, oferująca głęboki, ziemisty smak i bogaty aromat. Znakomita do wspomagania trawienia i ogólnej witalności."
+    },
+    {
+        "id": 40,
+        "name": "Lavender Chamomile Serenity",
+        "ingredients": "Rumianek, lawenda",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 13.50,
+        "temperature": 100,
+        "country": "Francja",
+        "description": "Kojąca mieszanka rumianku i lawendy, idealna na wieczorny relaks i zdrowy sen. Łączy delikatny smak rumianku z aromatem lawendy, wprowadzając w stan ukojenia."
+    },
+    {
+        "id": 41,
+        "name": "Arabica Supremo",
+        "ingredients": "Ziarna kawy Arabica",
+        "tags": [
+            "KAWA",
+            "KAWA_KLASYCZNA"
+        ],
+        "price": 25.00,
+        "temperature": 95,
+        "country": "Kolumbia",
+        "description": "Wyjątkowe ziarna kawy Arabica pochodzące z Kolumbii, o bogatym, pełnym smaku i delikatnej kwasowości. Idealne do parzenia klasycznego espresso oraz kaw mlecznych."
+    },
+    {
+        "id": 42,
+        "name": "Hazelnut Harmony",
+        "ingredients": "Ziarna kawy Arabica, aromat orzechowy",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 27.00,
+        "temperature": 95,
+        "country": "Brazylia",
+        "description": "Aromatyzowane ziarna kawy Arabica o delikatnym smaku orzecha laskowego, pochodzące z najlepszych plantacji brazylijskich. Idealne na relaksujące poranki i popołudnia."
+    },
+    {
+        "id": 43,
+        "name": "Caramel Crunch",
+        "ingredients": "Ziarna kawy Arabica, aromat karmelowy",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 28.00,
+        "temperature": 95,
+        "country": "Gwatemala",
+        "description": "Aromatyzowane ziarna kawy Arabica o słodkim smaku karmelu, pochodzące z plantacji w Gwatemali. Idealne do przygotowania aromatycznego espresso oraz kaw mlecznych."
+    },
+    {
+        "id": 44,
+        "name": "Vanilla Velvet",
+        "ingredients": "Ziarna kawy Arabica, aromat waniliowy",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 26.00,
+        "temperature": 95,
+        "country": "Kostaryka",
+        "description": "Delikatne ziarna kawy Arabica o aksamitnym smaku wanilii, pochodzące z plantacji w Kostaryce. Doskonałe do przygotowania słodkich kaw deserowych oraz klasycznych espresso."
+    },
+    {
+        "id": 45,
+        "name": "Chocolate Delight",
+        "ingredients": "Ziarna kawy Arabica, aromat czekoladowy",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 29.00,
+        "temperature": 95,
+        "country": "Peru",
+        "description": "Aromatyzowane ziarna kawy Arabica o bogatym smaku czekolady, pochodzące z najlepszych plantacji w Peru. Idealne do parzenia aromatycznej kawy na ciepło i na zimno."
+    },
+    {
+        "id": 46,
+        "name": "Cinnamon Spice",
+        "ingredients": "Ziarna kawy Arabica, aromat cynamonowy",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 27.50,
+        "temperature": 95,
+        "country": "Meksyk",
+        "description": "Ziarna kawy Arabica o korzennym smaku cynamonu, pochodzące z meksykańskich plantacji. Doskonałe do przygotowania rozgrzewającej kawy na zimowe wieczory."
+    },
+    {
+        "id": 47,
+        "name": "Mocha Magic",
+        "ingredients": "Ziarna kawy Arabica, aromat czekolady",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 28.50,
+        "temperature": 95,
+        "country": "Indonezja",
+        "description": "Aromatyzowane ziarna kawy Arabica o intensywnym smaku czekolady, pochodzące z plantacji w Indonezji. Idealne do przygotowania klasycznego espresso oraz kaw mlecznych."
+    },
+    {
+        "id": 48,
+        "name": "French Vanilla Dream",
+        "ingredients": "Ziarna kawy Arabica, aromat waniliowy",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 26.50,
+        "temperature": 95,
+        "country": "Francja",
+        "description": "Aromatyzowane ziarna kawy Arabica o delikatnym smaku wanilii, pochodzące z francuskich plantacji. Doskonałe do przygotowania aromatycznych kaw deserowych."
+    },
+    {
+        "id": 49,
+        "name": "Toffee Temptation",
+        "ingredients": "Ziarna kawy Arabica, aromat toffi",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 29.50,
+        "temperature": 95,
+        "country": "Kenia",
+        "description": "Aromatyzowane ziarna kawy Arabica o słodkim smaku toffi, pochodzące z najlepszych plantacji w Kenii. Idealne do przygotowania pysznej kawy na ciepło i na zimno."
+    },
+    {
+        "id": 50,
+        "name": "Espresso Elegance",
+        "ingredients": "Ziarna kawy Arabica",
+        "tags": [
+            "KAWA",
+            "KAWA_KLASYCZNA"
+        ],
+        "price": 25.00,
+        "temperature": 95,
+        "country": "Włochy",
+        "description": "Wykwintne ziarna kawy Arabica pochodzące z Włoch, znane z intensywnego smaku i bogatego aromatu. Idealne do parzenia klasycznego włoskiego espresso oraz kaw mlecznych."
+    },
+    {
+        "id": 51,
+        "name": "Mocha Bliss",
+        "ingredients": "Kawa, mleko, czekolada, cukier",
+        "tags": [
+            "KAWA",
+            "NAPOJ_KAWOWY"
+        ],
+        "price": 10.50,
+        "temperature": 5,
+        "country": "USA",
+        "description": "Bogaty, czekoladowy napój kawowy o aksamitnej konsystencji, idealny do picia na zimno. Doskonały sposób na orzeźwienie w ciepłe dni."
+    },
+    {
+        "id": 52,
+        "name": "Vanilla Iced Coffee",
+        "ingredients": "Kawa, mleko, syrop waniliowy, lód",
+        "tags": [
+            "KAWA",
+            "NAPOJ_KAWOWY"
+        ],
+        "price": 11.00,
+        "temperature": 5,
+        "country": "USA",
+        "description": "Orzeźwiający napój kawowy z dodatkiem wanilii, lodu i mleka. Idealny na upalne dni, oferuje delikatny i słodki smak wanilii."
+    },
+    {
+        "id": 53,
+        "name": "Caramel Frappuccino",
+        "ingredients": "Kawa, mleko, syrop karmelowy, lód, bita śmietana",
+        "tags": [
+            "KAWA",
+            "NAPOJ_KAWOWY"
+        ],
+        "price": 12.00,
+        "temperature": 5,
+        "country": "USA",
+        "description": "Kremowy, mrożony napój kawowy z dodatkiem syropu karmelowego i bitej śmietany. Doskonały sposób na ochłodzenie się w upalne dni."
+    },
+    {
+        "id": 54,
+        "name": "Iced Latte Macchiato",
+        "ingredients": "Kawa, mleko, lód",
+        "tags": [
+            "KAWA",
+            "NAPOJ_KAWOWY"
+        ],
+        "price": 10.00,
+        "temperature": 5,
+        "country": "Włochy",
+        "description": "Orzeźwiający napój kawowy, który łączy intensywność espresso z delikatnością mleka i lodem. Idealny na ciepłe dni, oferuje harmonijny smak."
+    },
+    {
+        "id": 55,
+        "name": "Coconut Coffee",
+        "ingredients": "Kawa, mleko kokosowe, lód",
+        "tags": [
+            "KAWA",
+            "NAPOJ_KAWOWY"
+        ],
+        "price": 11.50,
+        "temperature": 5,
+        "country": "Tajlandia",
+        "description": "Egzotyczny napój kawowy z dodatkiem mleka kokosowego i lodu, oferujący unikalny smak i orzeźwienie. Idealny na ciepłe dni."
+    },
+    {
+        "id": 56,
+        "name": "Peppermint",
+        "ingredients": "Mięta pieprzowa",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 8.00,
+        "temperature": 100,
+        "country": "Egipt",
+        "description": "Mięta pieprzowa to aromatyczne zioło o intensywnym smaku i zapachu, idealne do przygotowania naparów i dodawania do potraw. Znana ze swoich właściwości trawiennych i odświeżających."
+    },
+    {
+        "id": 57,
+        "name": "Chamomile",
+        "ingredients": "Rumianek",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 7.50,
+        "temperature": 100,
+        "country": "Niemcy",
+        "description": "Rumianek to delikatne zioło o kojących właściwościach, idealne do przygotowania relaksujących naparów. Znane ze swojego łagodzącego wpływu na trawienie i układ nerwowy."
+    },
+    {
+        "id": 58,
+        "name": "Lemon Balm",
+        "ingredients": "Melisa lekarska",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 8.50,
+        "temperature": 100,
+        "country": "Polska",
+        "description": "Melisa lekarska to zioło o cytrynowym aromacie, znane ze swoich uspokajających właściwości. Idealne do przygotowania naparów, które pomagają w relaksacji i poprawiają nastrój."
+    },
+    {
+        "id": 59,
+        "name": "Lavender",
+        "ingredients": "Lawenda",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 9.00,
+        "temperature": 100,
+        "country": "Francja",
+        "description": "Lawenda to aromatyczne zioło o pięknym kwiatowym zapachu, idealne do przygotowania relaksujących naparów i dodawania do potraw. Znana ze swoich kojących właściwości."
+    },
+    {
+        "id": 60,
+        "name": "Echinacea",
+        "ingredients": "Jeżówka purpurowa",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 10.00,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Jeżówka purpurowa to zioło o właściwościach wzmacniających układ odpornościowy, idealne do przygotowania naparów. Znane ze swojego pozytywnego wpływu na zdrowie i odporność."
+    },
+    {
+        "id": 61,
+        "name": "Ginger Root",
+        "ingredients": "Imbir",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 11.50,
+        "temperature": 100,
+        "country": "Indie",
+        "description": "Imbir to korzenne zioło o intensywnym smaku i aromacie, idealne do przygotowania rozgrzewających naparów i dodawania do potraw. Znane ze swoich właściwości przeciwzapalnych i wspomagających trawienie."
+    },
+    {
+        "id": 62,
+        "name": "St. John's Wort",
+        "ingredients": "Dziurawiec zwyczajny",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 9.50,
+        "temperature": 100,
+        "country": "Polska",
+        "description": "Dziurawiec to zioło o właściwościach uspokajających i przeciwdepresyjnych, idealne do przygotowania naparów wspomagających zdrowie psychiczne. Znane ze swojego pozytywnego wpływu na nastrój."
+    },
+    {
+        "id": 63,
+        "name": "Sage",
+        "ingredients": "Szałwia",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 8.50,
+        "temperature": 100,
+        "country": "Włochy",
+        "description": "Szałwia to aromatyczne zioło o intensywnym smaku, idealne do przygotowania naparów i dodawania do potraw. Znane ze swoich właściwości przeciwzapalnych i antyseptycznych."
+    },
+    {
+        "id": 64,
+        "name": "Rosemary",
+        "ingredients": "Rozmaryn",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 8.00,
+        "temperature": 100,
+        "country": "Francja",
+        "description": "Rozmaryn to aromatyczne zioło o intensywnym, leśnym smaku, idealne do przygotowania naparów i dodawania do potraw. Znane ze swoich właściwości poprawiających pamięć i koncentrację."
+    },
+    {
+        "id": 65,
+        "name": "Thyme",
+        "ingredients": "Tymianek",
+        "tags": [
+            "ZIOLA",
+            "ZIOLA_KLASYCZNE"
+        ],
+        "price": 7.00,
+        "temperature": 100,
+        "country": "Hiszpania",
+        "description": "Tymianek to zioło o intensywnym smaku i aromacie, idealne do przygotowania naparów i dodawania do potraw. Znane ze swoich właściwości antyseptycznych i wspomagających trawienie."
+    },
+    {
+        "id": 66,
+        "name": "Relaxing Evening Blend",
+        "ingredients": "Rumianek, lawenda, melisa",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 12.00,
+        "temperature": 100,
+        "country": "Francja",
+        "description": "Kojąca mieszanka ziół, idealna na wieczorny relaks. Rumianek, lawenda i melisa wspomagają odprężenie i pomagają zasnąć, oferując delikatny i przyjemny napar."
+    },
+    {
+        "id": 67,
+        "name": "Detox Herbal Mix",
+        "ingredients": "Pokrzywa, mięta, mniszek lekarski",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 13.50,
+        "temperature": 100,
+        "country": "Polska",
+        "description": "Mieszanka ziół detoksykacyjnych, wspomagająca oczyszczanie organizmu. Pokrzywa, mięta i mniszek lekarski pomagają usuwać toksyny, oferując świeży i orzeźwiający napar."
+    },
+    {
+        "id": 68,
+        "name": "Energy Boost Infusion",
+        "ingredients": "Żeń-szeń, miłorząb, mięta",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 14.00,
+        "temperature": 100,
+        "country": "Chiny",
+        "description": "Ożywcza mieszanka ziół, która dodaje energii i poprawia koncentrację. Żeń-szeń, miłorząb i mięta wspomagają układ nerwowy i poprawiają ogólne samopoczucie."
+    },
+    {
+        "id": 69,
+        "name": "Calm Mind Blend",
+        "ingredients": "Melisa, lawenda, kwiat pomarańczy",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 13.00,
+        "temperature": 100,
+        "country": "Francja",
+        "description": "Relaksująca mieszanka ziół, która pomaga uspokoić umysł i zredukować stres. Melisa, lawenda i kwiat pomarańczy oferują delikatny, kojący napar na spokojne chwile."
+    },
+    {
+        "id": 70,
+        "name": "Digestive Herbal Mix",
+        "ingredients": "Mięta, koper włoski, imbir",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 12.50,
+        "temperature": 100,
+        "country": "Egipt",
+        "description": "Mieszanka ziół wspomagających trawienie, idealna po posiłku. Mięta, koper włoski i imbir pomagają w trawieniu i redukują uczucie ciężkości, oferując świeży napar."
+    },
+    {
+        "id": 71,
+        "name": "Immunity Support Blend",
+        "ingredients": "Jeżówka, dzika róża, imbir",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 15.00,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Mieszanka ziół wspomagająca układ odpornościowy, idealna na chłodne dni. Jeżówka, dzika róża i imbir wspierają naturalną odporność organizmu."
+    },
+    {
+        "id": 72,
+        "name": "Refreshing Herbal Tonic",
+        "ingredients": "Mięta, trawa cytrynowa, eukaliptus",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 12.00,
+        "temperature": 100,
+        "country": "Australia",
+        "description": "Orzeźwiająca mieszanka ziół, idealna na ciepłe dni. Mięta, trawa cytrynowa i eukaliptus oferują chłodzący napar, który dodaje energii i odświeża."
+    },
+    {
+        "id": 73,
+        "name": "Relaxation Herbal Blend",
+        "ingredients": "Melisa, lawenda, passiflora",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 14.00,
+        "temperature": 100,
+        "country": "Hiszpania",
+        "description": "Relaksująca mieszanka ziół, która pomaga w odprężeniu i redukcji stresu. Melisa, lawenda i passiflora tworzą kojący napar, idealny na wieczorne chwile."
+    },
+    {
+        "id": 74,
+        "name": "Revitalizing Herbal Blend",
+        "ingredients": "Mięta, żeń-szeń, hibiskus",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 13.00,
+        "temperature": 100,
+        "country": "Chiny",
+        "description": "Ożywcza mieszanka ziół, która dodaje energii i witalności. Mięta, żeń-szeń i hibiskus wspomagają układ nerwowy i poprawiają ogólne samopoczucie."
+    },
+    {
+        "id": 75,
+        "name": "Winter Spice Herbal Blend",
+        "ingredients": "Imbir, cynamon, goździki",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 15.50,
+        "temperature": 100,
+        "country": "Indie",
+        "description": "Rozgrzewająca mieszanka ziół, idealna na zimowe dni. Imbir, cynamon i goździki tworzą aromatyczny napar, który dodaje energii i ciepła w chłodne wieczory."
+    },
+    {
+        "id": 76,
+        "name": "Ceramic Teapot",
+        "ingredients": "Ceramic",
+        "tags": [
+            "AKCESORIA",
+            "DZBANKI_DO_HERBATY"
+        ],
+        "price": 35.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Elegancki ceramiczny dzbanek do herbaty, idealny do parzenia i serwowania różnych rodzajów herbat. Stylowy dodatek do każdej kuchni."
+    },
+    {
+        "id": 77,
+        "name": "Glass Teacups",
+        "ingredients": "Glass",
+        "tags": [
+            "AKCESORIA",
+            "FILIZANKI"
+        ],
+        "price": 20.00,
+        "temperature": 100,
+        "country": "Włochy",
+        "description": "Zestaw szklanych filiżanek do herbaty, wykonanych z wysokiej jakości szkła. Idealne do serwowania gorących napojów i podziwiania koloru herbaty."
+    },
+    {
+        "id": 78,
+        "name": "Bamboo Tea Tray",
+        "ingredients": "Bamboo",
+        "tags": [
+            "AKCESORIA",
+            "POJEMNIKI"
+        ],
+        "price": 25.00,
+        "temperature": 100,
+        "country": "Chiny",
+        "description": "Stylowa bambusowa taca do serwowania herbaty, idealna do podawania filiżanek i dzbanków. Wykonana z ekologicznego bambusa."
+    },
+    {
+        "id": 79,
+        "name": "Tea Infuser Ball",
+        "ingredients": "Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "FILTRY"
+        ],
+        "price": 8.00,
+        "temperature": 100,
+        "country": "Niemcy",
+        "description": "Praktyczny kulkowy zaparzacz do herbaty, wykonany ze stali nierdzewnej. Idealny do parzenia luźnych liści herbaty bez fusów."
+    },
+    {
+        "id": 80,
+        "name": "Digital Tea Thermometer",
+        "ingredients": "Plastic, Electronic",
+        "tags": [
+            "AKCESORIA",
+            "TERMOMETRY"
+        ],
+        "price": 15.00,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Cyfrowy termometr do herbaty, umożliwiający precyzyjne mierzenie temperatury wody. Idealny do parzenia herbaty w odpowiedniej temperaturze."
+    },
+    {
+        "id": 81,
+        "name": "Matcha Whisk Set",
+        "ingredients": "Bamboo",
+        "tags": [
+            "AKCESORIA",
+            "AKCESORIA_DO_MATCHY"
+        ],
+        "price": 22.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Tradycyjny zestaw do matchy, zawierający bambusową trzepaczkę (chasen) i łyżeczkę (chashaku). Idealny do przygotowania japońskiej matchy."
+    },
+    {
+        "id": 82,
+        "name": "Mate Gourd and Bombilla",
+        "ingredients": "Gourd, Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "AKCESORIA_DO_YERBA_MATE"
+        ],
+        "price": 18.00,
+        "temperature": 100,
+        "country": "Argentyna",
+        "description": "Tradycyjny zestaw do yerba mate, zawierający tykwę (matero) i metalową rurkę (bombilla). Idealny do picia yerba mate w autentyczny sposób."
+    },
+    {
+        "id": 83,
+        "name": "Travel Tea Mug",
+        "ingredients": "Stainless Steel, Plastic",
+        "tags": [
+            "AKCESORIA",
+            "POJEMNIKI"
+        ],
+        "price": 18.50,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Praktyczny kubek do herbaty na wynos, wykonany ze stali nierdzewnej i plastiku. Utrzymuje temperaturę napoju przez długi czas."
+    },
+    {
+        "id": 84,
+        "name": "Tea Storage Tins",
+        "ingredients": "Metal",
+        "tags": [
+            "AKCESORIA",
+            "POJEMNIKI"
+        ],
+        "price": 15.00,
+        "temperature": 100,
+        "country": "Wielka Brytania",
+        "description": "Zestaw metalowych puszek do przechowywania herbaty, które zapewniają świeżość i aromat. Stylowy i praktyczny dodatek do kuchni."
+    },
+    {
+        "id": 85,
+        "name": "Tea Strainer",
+        "ingredients": "Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "FILTRY"
+        ],
+        "price": 10.00,
+        "temperature": 100,
+        "country": "Francja",
+        "description": "Elegancki zaparzacz do herbaty, wykonany ze stali nierdzewnej. Idealny do parzenia luźnych liści herbaty bez fusów."
+    },
+    {
+        "id": 86,
+        "name": "Bamboo Matcha Scoop",
+        "ingredients": "Bamboo",
+        "tags": [
+            "AKCESORIA",
+            "AKCESORIA_DO_MATCHY"
+        ],
+        "price": 7.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Tradycyjna bambusowa łyżeczka (chashaku) do matchy, idealna do precyzyjnego odmierzania proszku herbacianego. Niezbędny element do przygotowania japońskiej matchy."
+    },
+    {
+        "id": 87,
+        "name": "Ceramic Matcha Bowl",
+        "ingredients": "Ceramic",
+        "tags": [
+            "AKCESORIA",
+            "AKCESORIA_DO_MATCHY"
+        ],
+        "price": 25.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Elegancka ceramiczna miska (chawan) do matchy, idealna do tradycyjnego przygotowania japońskiej matchy. Ręcznie robiona, oferuje autentyczne doświadczenie herbaciane."
+    },
+    {
+        "id": 88,
+        "name": "Bamboo Matcha Whisk",
+        "ingredients": "Bamboo",
+        "tags": [
+            "AKCESORIA",
+            "AKCESORIA_DO_MATCHY"
+        ],
+        "price": 15.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Tradycyjna bambusowa trzepaczka (chasen) do matchy, idealna do spieniania proszku herbacianego. Niezbędny element do przygotowania autentycznej japońskiej matchy."
+    },
+    {
+        "id": 89,
+        "name": "Matcha Sifter",
+        "ingredients": "Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "AKCESORIA_DO_MATCHY"
+        ],
+        "price": 10.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Praktyczne sitko do przesiewania matchy, wykonane ze stali nierdzewnej. Zapewnia gładką konsystencję i równomierne rozprowadzenie proszku herbacianego."
+    },
+    {
+        "id": 90,
+        "name": "Porcelain Teapot",
+        "ingredients": "Porcelain",
+        "tags": [
+            "AKCESORIA",
+            "DZBANKI_DO_HERBATY"
+        ],
+        "price": 30.00,
+        "temperature": 100,
+        "country": "Chiny",
+        "description": "Elegancki porcelanowy dzbanek do herbaty, idealny do parzenia i serwowania różnych rodzajów herbat. Stylowy dodatek do każdej kuchni."
+    },
+    {
+        "id": 91,
+        "name": "Stainless Steel Teapot",
+        "ingredients": "Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "DZBANKI_DO_HERBATY"
+        ],
+        "price": 40.00,
+        "temperature": 100,
+        "country": "Włochy",
+        "description": "Wytrzymały dzbanek do herbaty wykonany ze stali nierdzewnej, idealny do codziennego użytku. Utrzymuje temperaturę naparu przez długi czas."
+    },
+    {
+        "id": 92,
+        "name": "Glass Tea Infuser Mug",
+        "ingredients": "Glass, Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "FILTRY"
+        ],
+        "price": 18.00,
+        "temperature": 100,
+        "country": "Niemcy",
+        "description": "Elegancki szklany kubek z wbudowanym zaparzaczem ze stali nierdzewnej, idealny do parzenia luźnych liści herbaty. Praktyczny i stylowy dodatek."
+    },
+    {
+        "id": 93,
+        "name": "Insulated Travel Tumbler",
+        "ingredients": "Stainless Steel, Plastic",
+        "tags": [
+            "AKCESORIA",
+            "POJEMNIKI"
+        ],
+        "price": 22.00,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Podwójnie izolowany kubek termiczny, wykonany ze stali nierdzewnej i plastiku. Utrzymuje temperaturę napoju przez długi czas, idealny w podróży."
+    },
+    {
+        "id": 94,
+        "name": "Clay Teapot",
+        "ingredients": "Clay",
+        "tags": [
+            "AKCESORIA",
+            "DZBANKI_DO_HERBATY"
+        ],
+        "price": 35.00,
+        "temperature": 100,
+        "country": "Chiny",
+        "description": "Tradycyjny gliniany dzbanek do herbaty, idealny do parzenia chińskiej herbaty. Oferuje autentyczne doświadczenie herbaciane i utrzymuje temperaturę naparu."
+    },
+    {
+        "id": 95,
+        "name": "Wooden Tea Box",
+        "ingredients": "Wood",
+        "tags": [
+            "AKCESORIA",
+            "POJEMNIKI"
+        ],
+        "price": 28.00,
+        "temperature": 100,
+        "country": "Indie",
+        "description": "Stylowe drewniane pudełko do przechowywania herbaty, zapewniające świeżość i aromat. Idealny dodatek do każdej kuchni, wykonany z wysokiej jakości drewna."
+    },
+    {
+        "id": 96,
+        "name": "Stainless Steel Tea Tongs",
+        "ingredients": "Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "FILTRY"
+        ],
+        "price": 12.00,
+        "temperature": 100,
+        "country": "Niemcy",
+        "description": "Praktyczne szczypce do herbaty wykonane ze stali nierdzewnej, idealne do wyjmowania saszetek herbaty z gorącej wody. Niezbędny dodatek do parzenia herbaty bez fusów."
+    },
+    {
+        "id": 97,
+        "name": "Insulated Glass Teapot",
+        "ingredients": "Glass, Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "DZBANKI_DO_HERBATY"
+        ],
+        "price": 45.00,
+        "temperature": 100,
+        "country": "Wielka Brytania",
+        "description": "Elegancki szklany dzbanek do herbaty z podwójnymi ściankami, utrzymujący temperaturę naparu przez długi czas. Idealny do parzenia i serwowania różnych rodzajów herbat."
+    },
+    {
+        "id": 98,
+        "name": "Ceramic Tea Caddy",
+        "ingredients": "Ceramic",
+        "tags": [
+            "AKCESORIA",
+            "POJEMNIKI"
+        ],
+        "price": 20.00,
+        "temperature": 100,
+        "country": "Chiny",
+        "description": "Stylowy ceramiczny pojemnik do przechowywania herbaty, zapewniający świeżość i aromat. Idealny dodatek do kuchni, wykonany z wysokiej jakości ceramiki."
+    },
+    {
+        "id": 99,
+        "name": "Glass Tea Warmer",
+        "ingredients": "Glass, Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "FILTRY"
+        ],
+        "price": 30.00,
+        "temperature": 100,
+        "country": "Francja",
+        "description": "Elegancki szklany podgrzewacz do herbaty, utrzymujący temperaturę naparu przez długi czas. Idealny do podgrzewania dzbanków i filiżanek herbaty."
+    },
+    {
+        "id": 100,
+        "name": "Silicone Tea Infuser",
+        "ingredients": "Silicone, Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "FILTRY"
+        ],
+        "price": 10.00,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Praktyczny silikonowy zaparzacz do herbaty w kształcie liścia, idealny do parzenia luźnych liści herbaty bez fusów. Łatwy w użyciu i czyszczeniu."
+    },
+    {
+        "id": 101,
+        "name": "Cast Iron Teapot",
+        "ingredients": "Cast Iron",
+        "tags": [
+            "AKCESORIA",
+            "DZBANKI_DO_HERBATY"
+        ],
+        "price": 50.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Wytrzymały żeliwny dzbanek do herbaty, idealny do parzenia i serwowania różnych rodzajów herbat. Utrzymuje temperaturę naparu przez długi czas."
+    },
+    {
+        "id": 102,
+        "name": "Stainless Steel Tea Scoop",
+        "ingredients": "Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "FILTRY"
+        ],
+        "price": 8.00,
+        "temperature": 100,
+        "country": "Niemcy",
+        "description": "Praktyczna stalowa łyżeczka do herbaty, idealna do odmierzania liści herbaty. Niezbędny dodatek do każdej kuchni."
+    },
+    {
+        "id": 103,
+        "name": "Tea Timer",
+        "ingredients": "Plastic, Electronic",
+        "tags": [
+            "AKCESORIA",
+            "TERMOMETRY"
+        ],
+        "price": 12.00,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Cyfrowy minutnik do herbaty, umożliwiający precyzyjne odmierzenie czasu parzenia. Idealny do zapewnienia idealnego smaku herbaty."
+    },
+    {
+        "id": 104,
+        "name": "Ceramic Tea Pot",
+        "ingredients": "Ceramic",
+        "tags": [
+            "AKCESORIA",
+            "DZBANKI_DO_HERBATY"
+        ],
+        "price": 25.00,
+        "temperature": 100,
+        "country": "Włochy",
+        "description": "Stylowy ceramiczny dzbanek do herbaty, idealny do parzenia i serwowania różnych rodzajów herbat. Elegancki dodatek do każdej kuchni."
+    },
+    {
+        "id": 105,
+        "name": "Tea Light Holder",
+        "ingredients": "Glass, Metal",
+        "tags": [
+            "AKCESORIA",
+            "FILTRY"
+        ],
+        "price": 15.00,
+        "temperature": 100,
+        "country": "Indie",
+        "description": "Elegancki świecznik do herbaty, wykonany ze szkła i metalu. Idealny do tworzenia przytulnej atmosfery podczas picia herbaty."
+    },
+    {
+        "id": 106,
+        "name": "Cherry Blossom Green Tea",
+        "ingredients": "Zielona herbata, kwiaty wiśni",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_ZIELONA_Z_DODATKAMI"
+        ],
+        "price": 20.00,
+        "temperature": 80,
+        "country": "Japonia",
+        "description": "Kunsztownie skomponowana zielona herbata z dodatkiem kwiatów wiśni, oferująca delikatny, kwiatowy aromat. Idealna na relaksujące popołudnia."
+    },
+    {
+        "id": 107,
+        "name": "French Roast",
+        "ingredients": "Ziarna kawy Arabica",
+        "tags": [
+            "KAWA",
+            "KAWA_KLASYCZNA"
+        ],
+        "price": 24.00,
+        "temperature": 95,
+        "country": "Francja",
+        "description": "Intensywnie palone ziarna kawy Arabica, oferujące głęboki i bogaty smak. Idealne do przygotowania mocnego, wyrazistego espresso."
+    },
+    {
+        "id": 108,
+        "name": "Tranquil Herbal Blend",
+        "ingredients": "Rumianek, trawa cytrynowa, werbena",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 12.50,
+        "temperature": 100,
+        "country": "Egipt",
+        "description": "Kojąca mieszanka ziół, która pomaga w odprężeniu i relaksacji. Rumianek, trawa cytrynowa i werbena tworzą delikatny, uspokajający napar."
+    },
+    {
+        "id": 109,
+        "name": "Matcha Starter Set",
+        "ingredients": "Bamboo, Ceramic",
+        "tags": [
+            "AKCESORIA",
+            "AKCESORIA_DO_MATCHY"
+        ],
+        "price": 30.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Zestaw startowy do matchy, zawierający bambusową trzepaczkę (chasen), łyżeczkę (chashaku) i ceramiczną miseczkę (chawan). Idealny do tradycyjnego przygotowania matchy."
+    },
+    {
+        "id": 110,
+        "name": "Lavender Earl Grey",
+        "ingredients": "Czarna herbata, olejek bergamotowy, kwiaty lawendy",
+        "tags": [
+            "HERBATA",
+            "KOMPOZYCJA_HERBACIANA",
+            "HERBATA_CZARNA_Z_DODATKAMI"
+        ],
+        "price": 18.00,
+        "temperature": 95,
+        "country": "Indie",
+        "description": "Wyjątkowa kompozycja czarnej herbaty Earl Grey z dodatkiem lawendy, oferująca wyrazisty, kwiatowy aromat. Idealna na poranne orzeźwienie."
+    },
+    {
+        "id": 111,
+        "name": "Chocolate Raspberry Coffee",
+        "ingredients": "Ziarna kawy Arabica, aromat czekolady, aromat maliny",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 28.00,
+        "temperature": 95,
+        "country": "Kostaryka",
+        "description": "Aromatyzowane ziarna kawy Arabica o bogatym smaku czekolady i maliny, pochodzące z plantacji w Kostaryce. Idealne do przygotowania aromatycznego espresso."
+    },
+    {
+        "id": 112,
+        "name": "Immunity Boost Herbal Mix",
+        "ingredients": "Echinacea, dzika róża, imbir",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 15.00,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Mieszanka ziół wspomagająca układ odpornościowy, idealna na chłodne dni. Echinacea, dzika róża i imbir wspierają naturalną odporność organizmu."
+    },
+    {
+        "id": 113,
+        "name": "Cast Iron Teapot Set",
+        "ingredients": "Cast Iron",
+        "tags": [
+            "AKCESORIA",
+            "DZBANKI_DO_HERBATY"
+        ],
+        "price": 60.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Elegancki żeliwny dzbanek do herbaty wraz z filiżankami, idealny do parzenia i serwowania różnych rodzajów herbat. Wyjątkowy zestaw do codziennego użytku."
+    },
+    {
+        "id": 114,
+        "name": "Mint Chocolate Chip Coffee",
+        "ingredients": "Ziarna kawy Arabica, aromat mięty, aromat czekolady",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 29.00,
+        "temperature": 95,
+        "country": "Peru",
+        "description": "Aromatyzowane ziarna kawy Arabica o bogatym smaku mięty i czekolady, pochodzące z najlepszych plantacji w Peru. Idealne do parzenia aromatycznej kawy."
+    },
+    {
+        "id": 115,
+        "name": "Green Rooibos Citrus Blend",
+        "ingredients": "Zielony rooibos, trawa cytrynowa, skórka pomarańczy",
+        "tags": [
+            "HERBATA",
+            "POZOSTALE",
+            "ROOIBOS_Z_DODATKAMI"
+        ],
+        "price": 17.50,
+        "temperature": 90,
+        "country": "RPA",
+        "description": "Orzeźwiająca mieszanka zielonego rooibosa z trawą cytrynową i skórką pomarańczy, oferująca lekki, cytrusowy smak. Idealna na ciepłe dni."
+    },
+    {
+        "id": 116,
+        "name": "Ginger Lemon Herbal Mix",
+        "ingredients": "Imbir, trawa cytrynowa, liście cytryny",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 13.00,
+        "temperature": 100,
+        "country": "Indie",
+        "description": "Rozgrzewająca mieszanka ziół z imbirem, trawą cytrynową i liśćmi cytryny. Idealna na chłodne dni, oferuje aromatyczny i orzeźwiający napar."
+    },
+    {
+        "id": 117,
+        "name": "Glass Tea Pitcher",
+        "ingredients": "Glass",
+        "tags": [
+            "AKCESORIA",
+            "DZBANKI_DO_HERBATY"
+        ],
+        "price": 25.00,
+        "temperature": 100,
+        "country": "Włochy",
+        "description": "Elegancki szklany dzbanek do herbaty, idealny do parzenia i serwowania mrożonych naparów. Stylowy i praktyczny dodatek do każdej kuchni."
+    },
+    {
+        "id": 118,
+        "name": "Honey Lavender Coffee",
+        "ingredients": "Ziarna kawy Arabica, aromat miodu, aromat lawendy",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 28.50,
+        "temperature": 95,
+        "country": "Indonezja",
+        "description": "Aromatyzowane ziarna kawy Arabica o delikatnym smaku miodu i lawendy, pochodzące z plantacji w Indonezji. Idealne do przygotowania klasycznego espresso."
+    },
+    {
+        "id": 119,
+        "name": "Citrus Delight Herbal Blend",
+        "ingredients": "Kwiat pomarańczy, trawa cytrynowa, skórka cytryny",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 14.00,
+        "temperature": 100,
+        "country": "Hiszpania",
+        "description": "Orzeźwiająca mieszanka ziół, która dodaje energii i poprawia nastrój. Kwiat pomarańczy, trawa cytrynowa i skórka cytryny tworzą aromatyczny napar."
+    },
+    {
+        "id": 120,
+        "name": "Stainless Steel Travel Mug",
+        "ingredients": "Stainless Steel, Plastic",
+        "tags": [
+            "AKCESORIA",
+            "POJEMNIKI"
+        ],
+        "price": 20.00,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Praktyczny kubek podróżny wykonany ze stali nierdzewnej i plastiku, idealny do zabrania ulubionej herbaty lub kawy na wynos. Utrzymuje temperaturę napoju przez długi czas."
+    },
+    {
+        "id": 121,
+        "name": "Chai Spiced Herbal Mix",
+        "ingredients": "Cynamon, imbir, kardamon, goździki",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 14.50,
+        "temperature": 100,
+        "country": "Indie",
+        "description": "Aromatyczna mieszanka ziół inspirowana tradycyjnym indyjskim chai. Cynamon, imbir, kardamon i goździki tworzą rozgrzewający i korzenny napar, idealny na zimowe dni."
+    },
+    {
+        "id": 122,
+        "name": "Golden Turmeric Coffee",
+        "ingredients": "Ziarna kawy Arabica, kurkuma",
+        "tags": [
+            "KAWA",
+            "KAWA_SMAKOWA"
+        ],
+        "price": 27.50,
+        "temperature": 95,
+        "country": "Indie",
+        "description": "Aromatyzowane ziarna kawy Arabica o bogatym smaku kurkumy, pochodzące z najlepszych plantacji w Indiach. Idealne do przygotowania aromatycznego espresso z nutą egzotyki."
+    },
+    {
+        "id": 123,
+        "name": "Glass Tea Cup with Infuser",
+        "ingredients": "Glass, Stainless Steel",
+        "tags": [
+            "AKCESORIA",
+            "FILTRY"
+        ],
+        "price": 15.00,
+        "temperature": 100,
+        "country": "Niemcy",
+        "description": "Elegancka szklana filiżanka z wbudowanym zaparzaczem ze stali nierdzewnej, idealna do parzenia luźnych liści herbaty. Praktyczny i stylowy dodatek do kuchni."
+    },
+    {
+        "id": 124,
+        "name": "Lemon Ginger Herbal Infusion",
+        "ingredients": "Imbir, skórka cytryny, trawa cytrynowa",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 13.50,
+        "temperature": 100,
+        "country": "Polska",
+        "description": "Ożywcza mieszanka ziół z imbirem, skórką cytryny i trawą cytrynową. Idealna na chłodne dni, oferuje aromatyczny i orzeźwiający napar."
+    },
+    {
+        "id": 125,
+        "name": "Berry Delight Herbal Blend",
+        "ingredients": "Truskawka, malina, hibiskus",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 15.00,
+        "temperature": 100,
+        "country": "Polska",
+        "description": "Pyszna mieszanka ziół z dodatkiem truskawek, malin i hibiskusa. Oferuje intensywny owocowy smak, idealny na ciepło i na zimno. Doskonała na każdą porę dnia."
+    },
+    {
+        "id": 126,
+        "name": "Lavender Chamomile Tea",
+        "ingredients": "Rumianek, lawenda",
+        "tags": [
+            "ZIOLA",
+            "KOMPOZYCJA_ZIOLOWA"
+        ],
+        "price": 14.00,
+        "temperature": 100,
+        "country": "Francja",
+        "description": "Relaksująca mieszanka ziół z rumiankiem i lawendą, idealna na wieczorny relaks. Łączy delikatny smak rumianku z kojącym aromatem lawendy, wprowadzając w stan ukojenia."
+    },
+    {
+        "id": 127,
+        "name": "Ceramic Mug Set",
+        "ingredients": "Ceramic",
+        "tags": [
+            "AKCESORIA",
+            "FILIZANKI"
+        ],
+        "price": 30.00,
+        "temperature": 100,
+        "country": "Włochy",
+        "description": "Zestaw eleganckich ceramicznych filiżanek, idealnych do serwowania herbaty lub kawy. Stylowy dodatek do każdej kuchni."
+    },
+    {
+        "id": 128,
+        "name": "Insulated Tea Tumbler",
+        "ingredients": "Stainless Steel, Plastic",
+        "tags": [
+            "AKCESORIA",
+            "POJEMNIKI"
+        ],
+        "price": 25.00,
+        "temperature": 100,
+        "country": "USA",
+        "description": "Podwójnie izolowany kubek do herbaty wykonany ze stali nierdzewnej i plastiku, utrzymujący temperaturę napoju przez długi czas. Idealny do zabrania ulubionej herbaty na wynos."
+    },
+    {
+        "id": 129,
+        "name": "Matcha Mixing Bowl",
+        "ingredients": "Ceramic",
+        "tags": [
+            "AKCESORIA",
+            "AKCESORIA_DO_MATCHY"
+        ],
+        "price": 20.00,
+        "temperature": 100,
+        "country": "Japonia",
+        "description": "Ceramiczna miska do mieszania matchy, idealna do tradycyjnego przygotowania japońskiej matchy. Wysoka jakość ceramiki gwarantuje autentyczne doświadczenie herbaciane."
+    }
+]
