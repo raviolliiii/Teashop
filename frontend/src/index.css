@@ -1,4 +1,56 @@
-#navBar{
-    user-select: none;
+.font{
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    font-size: 12px;
 }
 
+#searchBar, #searchBar a{
+    background-color: #156f48 !important;
+    color: #d7e2a1 !important;
+}
+#searchBar form input{
+    background-color: #d7e2a1;
+    border: #093824 !important;
+    color: #093824 !important;
+}
+#searchBar button{
+    background-color: #093824;
+    color: #d7e2a1;
+}
+
+#navBar, #navBar a{
+    user-select: none;
+    background-color: #d7e2a1 !important;
+    color: #093824 !important;
+    font-weight: 600;
+}
+
+body{
+    background-color: #e6ead2;
+}
+
+#productsPage h6, h3{
+    color: #bf4e30 !important;
+}
+.ingredients{
+    font-size: 13px;
+    height: 40px;
+}
+
+#searchPath{
+    background-color: #e3eabe;
+    color: #093824;
+}
+#productsPage{
+    min-height: 600px;
+}
+
+.border-top, .border-bottom{
+    border-color: #093824 !important;
+} 
+
+/*
+    #d7e2a1ff
+--dark-pastel-green: ;
+--licorice: #230c0fff;
+--jasper: #bf4e30ff;
+--dark-green: #093824ff;*/

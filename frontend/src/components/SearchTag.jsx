@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { setQuery, setTag } from "../assets/searchSlice"
+import { setQuery, setTag, setTagName } from "../assets/searchSlice"
 
 
 function SearchTag({text, tag})
@@ -10,6 +10,7 @@ function SearchTag({text, tag})
             <a type="button" onClick={() => {
                 dispatch(setTag(tag));
                 dispatch(setQuery(""));
+                dispatch(setTagName(text));
                 }}>
                 {text}
             </a>

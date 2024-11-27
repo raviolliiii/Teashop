@@ -3,7 +3,7 @@ import SearchTag from "../components/searchTag";
 function NavBar() {
     return (
         <div id="navBar" className="container-fluid m-0 p-0">
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg">
                 <div className="container d-flex justify-content-center">
                     <button className="navbar-toggler"
                         type="button"
@@ -16,44 +16,52 @@ function NavBar() {
                     <div id="navbarContent" className="collapse navbar-collapse row" >
                         <ul className="navbar-nav d-flex justify-content-evenly w-100 col-12">
                             <li className="nav-item">
-                                <a className="nav-link dropdown-toggle active"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#teaCollapse"
-                                    aria-expanded="false"
-                                    role="button">
+                                <h5>
+                                    <a className="nav-link dropdown-toggle active"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#teaCollapse"
+                                        aria-expanded="false"
+                                        role="button">
+                                        Herbaty
 
-                                    Herbaty
-                                </a>
+                                    </a>
+                                </h5>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link dropdown-toggle active"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#coffeeCollapse"
-                                    aria-expanded="false"
-                                    role="button">
+                                <h5>
+                                    <a className="nav-link dropdown-toggle active"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#coffeeCollapse"
+                                        aria-expanded="false"
+                                        role="button">
 
-                                    Kawy
-                                </a>
+                                        Kawy
+                                    </a>
+                                </h5>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link dropdown-toggle active"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#herbsCollapse"
-                                    aria-expanded="false"
-                                    role="button">
+                                <h5>
+                                    <a className="nav-link dropdown-toggle active"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#herbsCollapse"
+                                        aria-expanded="false"
+                                        role="button">
 
-                                    Zioła
-                                </a>
+                                        Zioła
+                                    </a>
+                                </h5>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link dropdown-toggle active"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#accessoriesCollapse"
-                                    aria-expanded="false"
-                                    role="button">
+                                <h5>
+                                    <a className="nav-link dropdown-toggle active"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#accessoriesCollapse"
+                                        aria-expanded="false"
+                                        role="button">
 
-                                    Akcesoria
-                                </a>
+                                        Akcesoria
+                                    </a>
+                                </h5>
                             </li>
                         </ul>
 

@@ -4,7 +4,8 @@ export const searchSlice = createSlice({
     name: 'search',
     initialState: {
         query: "",
-        tag: ""
+        tag: "",
+        tagName: ""
     },
     reducers: {
         setQuery: (state, newQuery) => {
@@ -12,10 +13,13 @@ export const searchSlice = createSlice({
         },
         setTag: (state, newTag) => {
             state.tag = newTag.payload
+        },
+        setTagName: (state, newTagName) => {
+            state.tagName = newTagName.payload
         }
     }
 })
 
-export const {setQuery, setTag} = searchSlice.actions;
+export const {setQuery, setTag, setTagName} = searchSlice.actions;
 
 export default searchSlice.reducer;
