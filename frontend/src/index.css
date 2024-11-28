@@ -8,13 +8,13 @@
     color: #d7e2a1 !important;
 }
 #searchBar form input{
-    background-color: #d7e2a1;
+    background-color: #e3eabe;
     border: #093824 !important;
     color: #093824 !important;
 }
 #searchBar button{
     background-color: #093824;
-    color: #d7e2a1;
+    color: #e6ead2;
 }
 
 #navBar, #navBar a{
@@ -40,6 +40,12 @@ body{
     background-color: #e3eabe;
     color: #093824;
 }
+#searchPath select{
+    background-color: #d7e2a1;
+    border: #093824;
+    color: #093824;
+}
+
 #productsPage{
     min-height: 600px;
 }

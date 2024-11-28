@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setQuery, setTag } from "../assets/searchSlice";
+import { setQuery, setSort, setTag, setTagName } from "../assets/searchSlice";
 
 
 
@@ -17,6 +17,8 @@ function SearchBar() {
     const resetSearch = () => {
         dispatch(setQuery(""));
         dispatch(setTag(""));
+        dispatch(setTagName(""));
+        dispatch(setSort(1));
     }
 
     return (

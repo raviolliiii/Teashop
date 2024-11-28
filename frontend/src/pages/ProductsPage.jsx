@@ -1,14 +1,17 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import data from "../assets/json.json"
+import { setSort } from "../assets/searchSlice";
 
 function ProductsPage() {
     const tag = useSelector((state) => state.search.tag);
     const tagName = useSelector((state) => state.search.tagName);
     const query = useSelector((state) => state.search.query);
+    const sort = useSelector((state) => state.search.sort);
     const [products, setProducts] = useState([]);
     const [filtered, setFiltered] = useState([]);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         axios.get('http://localhost:5000/tea')
@@ -34,9 +37,28 @@ function ProductsPage() {
                         || item.description.toLowerCase().includes(query.toLowerCase())
                         || item.ingredients.toLowerCase().includes(query.toLowerCase())
                     );
+            }).toSorted((a, b) => {
+                switch (sort){
+                    case 1:
+                        return a.name.localeCompare(b.name);
+                    case 2: 
+                        return -a.name.localeCompare(b.name);
+                    case 3:
+                        if(a.price < b.price) return -1;
+                        if(a.price > b.price) return 1;
+                        return 0;
+                    case 4:
+                        if(a.price < b.price) return 1;
+                        if(a.price > b.price) return -1;
+                        return 0;
+                }
             })
         );
-    }, [products, tag, query])
+    }, [products, tag, query, sort])
+
+    const handleSelect = (e) => {
+        dispatch(setSort(Number(e.target.value)));
+    };
 
     return (
         <div id="productsPage" className="container-fluid m-0 p-0">
@@ -46,12 +68,12 @@ function ProductsPage() {
                         <h5>Strona główna{(tag != "") ? " > " + tagName : ""}{(query != "") ? " > " + query : ""}</h5>
                     </div>
                     <div className="col-6 row">
-                        <div className="col-6 text-end h-auto">
-                            <h6 className="align-middle">Sortuj wg: </h6>
+                        <div className="col-6 text-end">
+                            <h5>Sortuj wg: </h5>
                         </div>
                         <div className="col-6">
-                            <select class="form-select">
-                                <option value={1} selected>Nazwa, od A do Z</option>
+                            <select className="form-select" value={sort} onChange={handleSelect}>
+                                <option value={1}>Nazwa, od A do Z</option>
                                 <option value={2}>Nazwa, od Z do A</option>
                                 <option value={3}>Cena, rosnąco</option>
                                 <option value={4}>Cena, malejąco</option>
@@ -73,7 +95,7 @@ function ProductsPage() {
                                     <div className="ingredients">{item.ingredients}</div>
                                 </div>
                                 <div>
-                                    <h3>{item.price.toPrecision(2) + " zł"}</h3>
+                                    <h3>{item.price.toFixed(2) + " zł"}</h3>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +108,7 @@ function ProductsPage() {
                                     <div className="ingredients">{item.ingredients}</div>
                                 </div>
                                 <div>
-                                    <h3>{item.price.toPrecision(2) + " zł"}</h3>
+                                    <h3>{item.price.toFixed(2) + " zł"}</h3>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +121,7 @@ function ProductsPage() {
                                     <div className="ingredients">{item.ingredients}</div>
                                 </div>
                                 <div>
-                                    <h3>{item.price.toPrecision(2) + " zł"}</h3>
+                                    <h3>{item.price.toFixed(2) + " zł"}</h3>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +133,7 @@ function ProductsPage() {
                                     <h6>{item.name}</h6>
                                 </div>
                                 <div>
-                                    <h3>{item.price.toPrecision(2) + " zł"}</h3>
+                                    <h3>{item.price.toFixed(2) + " zł"}</h3>
                                 </div>
                             </div>
                         </div>
