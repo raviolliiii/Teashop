@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux"
 import { setQuery, setTag, setTagName } from "../assets/searchSlice"
+import { Link } from "react-router-dom";
 
 
 function SearchTag({text, tag})
@@ -7,13 +8,13 @@ function SearchTag({text, tag})
     const dispatch = useDispatch();
     return( 
         <p className="text-center">
-            <a type="button" onClick={() => {
+            <Link className="Link" type="button" onClick={() => {
                 dispatch(setTag(tag));
                 dispatch(setQuery(""));
                 dispatch(setTagName(text));
                 }}>
                 {text}
-            </a>
+            </Link>
         </p>
     )
 }

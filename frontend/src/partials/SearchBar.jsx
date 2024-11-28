@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { setQuery, setSort, setTag, setTagName } from "../assets/searchSlice";
+import { Link } from "react-router-dom";
 
 
 
@@ -25,7 +26,7 @@ function SearchBar() {
         <nav id="searchBar" className="navbar border-bottom d-flex justify-content-center">
             <div className="container-lg row">
                 <div className="col-3 col-xxl-6">
-                    <a className="navbar-brand m-xl-2" type="button" onClick={resetSearch}>TeaShop Brand Logo</a>
+                    <Link to={"/"} className="navbar-brand m-xl-2" type="button" onClick={resetSearch}>TeaShop Brand Logo</Link>
                 </div>
                 <div className="col-9 col-xxl-6 row">
                     <form className="d-flex col-7 col-lg-5 m-xl-2" onSubmit={handleSearch}>

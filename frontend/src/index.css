@@ -39,6 +39,7 @@ body{
 #searchPath{
     background-color: #e3eabe;
     color: #093824;
+    border-bottom: #d7e2a1 1px solid;
 }
 #searchPath select{
     background-color: #d7e2a1;
@@ -46,13 +47,22 @@ body{
     color: #093824;
 }
 
-#productsPage{
+#productsPage, #productPage{
     min-height: 600px;
+}
+
+#productPage h2, #productPage td, #productPage th, #productPage table{
+    color: #093824 !important;
 }
 
 .border-top, .border-bottom{
     border-color: #093824 !important;
 } 
+
+.Link{
+    text-decoration: none;
+}
+
 
 /*
     #d7e2a1ff

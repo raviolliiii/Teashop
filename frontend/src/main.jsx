@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   {
     path:'/',               element: <App/>,
     children:[
-      {path: '/',           element: <ProductsPage/>},
+      {path: '',            element: <ProductsPage/>},
       {path: 'product/:id', element: <ProductPage/>},
       {path: 'login',       element: <LoginPage/>},
       {path: '*',           element: <NotFound/>}
@@ -28,9 +28,7 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router}/>
-    </Provider>
-  </StrictMode>,
+  <Provider store={store}>
+    <RouterProvider router={router}/>
+  </Provider>
 )

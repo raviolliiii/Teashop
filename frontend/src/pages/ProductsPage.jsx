@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import data from "../assets/json.json"
 import { setSort } from "../assets/searchSlice";
+import { Link } from "react-router-dom";
 
 function ProductsPage() {
     const tag = useSelector((state) => state.search.tag);
@@ -38,18 +39,18 @@ function ProductsPage() {
                         || item.ingredients.toLowerCase().includes(query.toLowerCase())
                     );
             }).toSorted((a, b) => {
-                switch (sort){
+                switch (sort) {
                     case 1:
                         return a.name.localeCompare(b.name);
-                    case 2: 
+                    case 2:
                         return -a.name.localeCompare(b.name);
                     case 3:
-                        if(a.price < b.price) return -1;
-                        if(a.price > b.price) return 1;
+                        if (a.price < b.price) return -1;
+                        if (a.price > b.price) return 1;
                         return 0;
                     case 4:
-                        if(a.price < b.price) return 1;
-                        if(a.price > b.price) return -1;
+                        if (a.price < b.price) return 1;
+                        if (a.price > b.price) return -1;
                         return 0;
                 }
             })
@@ -91,7 +92,7 @@ function ProductsPage() {
                             <div className="w-75">
                                 <img className="img-fluid" src={"/img/tea" + (item.id % 9 + 1) + ".png"} />
                                 <div>
-                                    <h6>{item.name}</h6>
+                                    <Link className="Link" to={"/product/" + item.id}><h6>{item.name}</h6></Link>
                                     <div className="ingredients">{item.ingredients}</div>
                                 </div>
                                 <div>
@@ -104,7 +105,7 @@ function ProductsPage() {
                             <div className="w-75">
                                 <img className="img-fluid" src={"/img/coffee1.png"} />
                                 <div>
-                                    <h6>{item.name}</h6>
+                                    <Link className="Link" to={"/product/" + item.id}><h6>{item.name}</h6></Link>
                                     <div className="ingredients">{item.ingredients}</div>
                                 </div>
                                 <div>
@@ -117,7 +118,7 @@ function ProductsPage() {
                             <div className="w-75">
                                 <img className="img-fluid" src={"/img/herbs" + (item.id % 2 + 1) + ".png"} />
                                 <div>
-                                    <h6>{item.name}</h6>
+                                    <Link className="Link" to={"/product/" + item.id}><h6>{item.name}</h6></Link>
                                     <div className="ingredients">{item.ingredients}</div>
                                 </div>
                                 <div>
@@ -130,7 +131,7 @@ function ProductsPage() {
                             <div className="w-75">
                                 <img className="img-fluid" src={"/img/accessory" + (item.id % 2 + 1) + ".png"} />
                                 <div>
-                                    <h6>{item.name}</h6>
+                                    <Link className="Link" to={"/product/" + item.id}><h6>{item.name}</h6></Link>
                                 </div>
                                 <div>
                                     <h3>{item.price.toFixed(2) + " zł"}</h3>
