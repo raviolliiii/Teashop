@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import ProductsPage from './pages/ProductsPage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
+import BasketPage from './pages/BasketPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: '', element: <ProductsPage /> },
       { path: 'product/:id', element: <ProductPage /> },
       { path: 'login', element: <LoginPage /> },
+      { path: 'basket', element: <BasketPage /> },
       { path: '*', element: <NotFound /> }
     ]
   }

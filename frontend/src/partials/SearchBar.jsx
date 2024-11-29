@@ -39,10 +39,12 @@ function SearchBar() {
                         <i className="bi bi-person-fill" />
                         <span className="d-none d-lg-inline"> ZALOGUJ SIĘ</span>
                     </button>
-                    <button className="col-2 col-lg-3 btn m-xl-2 m-1 text-middle fw-semibold">
-                        <i className="bi bi-basket2" />
-                        <span className="d-none d-lg-inline"> KOSZYK</span>
-                    </button>
+                    <Link to={"/basket"} className="Link col-2 col-lg-3 m-xl-2 m-1 text-middle">
+                        <button className="btn w-100 fw-semibold">
+                            <i className="bi bi-basket2" />
+                            <span className="d-none d-lg-inline"> KOSZYK</span>
+                        </button>
+                    </Link>
                 </div>
 
             </div>

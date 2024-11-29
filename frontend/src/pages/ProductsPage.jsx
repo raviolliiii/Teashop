@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import data from "../assets/json.json"
+//import data from "../assets/json.json"
 import { setSort } from "../assets/searchSlice";
 import { Link } from "react-router-dom";
 
@@ -15,10 +15,11 @@ function ProductsPage() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        /*axios.get('http://localhost:5000/tea')
+        axios.get('http://localhost:5000/tea')
             .then(res => setProducts(res.data))
-            .catch(err => console.log(err));*/
-        setProducts(data);
+            .catch(err => console.log(err));
+        
+            //setProducts(data);
     }, []);
 
     useEffect(() => {

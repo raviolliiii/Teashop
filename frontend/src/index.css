@@ -39,7 +39,7 @@ body{
 #searchPath{
     background-color: #e3eabe;
     color: #093824;
-    border-bottom: #d7e2a1 1px solid;
+    border-bottom: #d7e2a1 1px solid !important;
 }
 #searchPath select{
     background-color: #d7e2a1;
@@ -47,7 +47,7 @@ body{
     color: #093824;
 }
 
-#productsPage, #productPage{
+#productsPage, #productPage, #basketPage{
     min-height: 600px;
 }
 
