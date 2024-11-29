@@ -15,9 +15,10 @@ function ProductsPage() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        axios.get('http://localhost:5000/tea')
+        /*axios.get('http://localhost:5000/tea')
             .then(res => setProducts(res.data))
-            .catch(err => console.log(err));
+            .catch(err => console.log(err));*/
+        setProducts(data);
     }, []);
 
     useEffect(() => {
@@ -90,7 +91,7 @@ function ProductsPage() {
                     if (item.tags.includes("HERBATA"))
                         return <div className="col-6 col-xl-3 productsCard" key={item.id}>
                             <div className="w-75">
-                                <img className="img-fluid" src={"/img/tea" + (item.id % 9 + 1) + ".png"} />
+                                <Link className="Link" to={"/product/" + item.id}><img className="img-fluid" src={"/img/tea" + (item.id % 9 + 1) + ".png"} /></Link>
                                 <div>
                                     <Link className="Link" to={"/product/" + item.id}><h6>{item.name}</h6></Link>
                                     <div className="ingredients">{item.ingredients}</div>
@@ -103,7 +104,7 @@ function ProductsPage() {
                     else if (item.tags.includes("KAWA"))
                         return <div className="col-6 col-xl-3 productsCard" key={item.id}>
                             <div className="w-75">
-                                <img className="img-fluid" src={"/img/coffee1.png"} />
+                                <Link className="Link" to={"/product/" + item.id}><img className="img-fluid" src={"/img/coffee1.png"} /></Link>
                                 <div>
                                     <Link className="Link" to={"/product/" + item.id}><h6>{item.name}</h6></Link>
                                     <div className="ingredients">{item.ingredients}</div>
@@ -116,7 +117,7 @@ function ProductsPage() {
                     else if (item.tags.includes("ZIOLA"))
                         return <div className="col-6 col-xl-3 productsCard" key={item.id}>
                             <div className="w-75">
-                                <img className="img-fluid" src={"/img/herbs" + (item.id % 2 + 1) + ".png"} />
+                                <Link className="Link" to={"/product/" + item.id}><img className="img-fluid" src={"/img/herbs" + (item.id % 2 + 1) + ".png"} /></Link>
                                 <div>
                                     <Link className="Link" to={"/product/" + item.id}><h6>{item.name}</h6></Link>
                                     <div className="ingredients">{item.ingredients}</div>
@@ -129,7 +130,7 @@ function ProductsPage() {
                     else if (item.tags.includes("AKCESORIA"))
                         return <div className="col-6 col-xl-3 productsCard" key={item.id}>
                             <div className="w-75">
-                                <img className="img-fluid" src={"/img/accessory" + (item.id % 2 + 1) + ".png"} />
+                                <Link className="Link" to={"/product/" + item.id}><img className="img-fluid" src={"/img/accessory" + (item.id % 2 + 1) + ".png"} /></Link>
                                 <div>
                                     <Link className="Link" to={"/product/" + item.id}><h6>{item.name}</h6></Link>
                                 </div>
