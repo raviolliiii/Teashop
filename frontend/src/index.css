@@ -12,9 +12,9 @@
     border: #093824 !important;
     color: #093824 !important;
 }
-#searchBar button{
+#searchBar button, #basketSummary button, #summaryPage button, #loginPage button, #loginPage button h4, #registerPage button, #registerPage button h4{
     background-color: #093824;
-    color: #e6ead2;
+    color: #f8fce8;
 }
 
 #navBar, #navBar a{
@@ -47,8 +47,8 @@ body{
     color: #093824;
 }
 
-#productsPage, #productPage, #basketPage{
-    min-height: 600px;
+#productsPage, #productPage, #basketPage, #summaryPage, #loginPage, #registerPage{
+    min-height: 800px;
 }
 
 #productPage h2, #productPage td, #productPage th, #productPage table{
@@ -63,6 +63,43 @@ body{
     text-decoration: none;
 }
 
+.basketItem{
+    background-color: #d7e2a1;
+    border: #093824 1px solid;
+    color: #093824;
+}
+.basketItem h4, #basketSummary h1{
+    color: #bf4e30;
+}
+.basketItem span{
+    color: #093824 !important;
+    background-color: #e6ead2 !important;
+    border: #156f48 1px solid !important;
+    font-weight: 600;
+}
+.basketItem input{
+    color: #093824 !important;
+    border: #156f48 1px solid !important;
+    font-weight: 600;
+}
+.basketItem i{
+    color: #ff0000;
+}
+.basketItem .Link{
+    color: #093824;
+}
+
+.greenBox{
+    background-color: #d7e2a1;
+    border: #093824 1px solid;
+    color: #093824;
+}
+
+#basketSummary{
+    background-color: #d7e2a1;
+    border: #093824 1px solid;
+    color: #093824;
+}
 
 /*
     #d7e2a1ff

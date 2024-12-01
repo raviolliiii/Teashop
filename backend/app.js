@@ -1,15 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const cookieParser = require('cookie-parser');
 
 const app = express();
+const tokenKey = "justANormalTokenKey";
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 app.use(express.json());
+app.use(cookieParser())
 
-
+//Tea management
 mongoose.connect('mongodb://localhost:27017/tea')
     .then(() => console.log("Połączono z MongoDB"))
     .catch((err) => console.log(err));
@@ -18,9 +22,9 @@ const teaSchema = new mongoose.Schema({
     id: Number,
     name: String,
     ingredients: String,
-    type: [],
-    price_per_100g: Number,
-    temperature: String,
+    tags: [],
+    price: Number, //If by weight, price per 50g
+    temperature: Number,
     country: String,
     description: String
 });
@@ -29,77 +33,93 @@ const teaSchema = new mongoose.Schema({
 const TeaModel = mongoose.model('tea', teaSchema);
 
 app.get('/tea', async (req, res) => {
-    try{
+    try {
         const tea = await TeaModel.find();
         res.json(tea);
         console.log(tea);
     } catch (err) {
-        res.status(500).json({message: err.message});
+        res.status(500).json({ message: err.message });
     }
 })
 
-app.post('/tea', async (req, res) => {
-    const {
-        id,
-        name,
-        ingredients,
-        type,
-        price_per_100g,
-        temperature,
-        country,
-        description
-    } = req.body;
-    
-    const newTea = new TeaModel({
-        id,
-        name,
-        ingredients,
-        type,
-        price_per_100g,
-        temperature,
-        country,
-        description
-    });
+
+
+//User management
+const userSchema = new mongoose.Schema({
+    username: { type: String, required: true, unique: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    orders: [],
+    country: String,
+    city: String,
+    street: String,
+    houseNumber: String,
+    flatNumber: String,
+    postalCode: String,
+    postalCity: String,
+    phone: String
+})
+
+userSchema.pre('save', async function (next) {
+    this.password = await bcrypt.hash(this.password, 10);
+    next();
+})
+
+const User = mongoose.model('user', userSchema);
+
+app.post('/register', async (req, res) => {
+    const { username, email, password, country, city, street, houseNumber, flatNumber, postalCode, postalCity, phone } = req.body;
     try {
-        const savedTea = await newTea.save();
-        res.status(201).json(savedTea);
-    } catch (err) {
-        res.status(400).json({message : err.message});
-    }
-})
+        if (await User.findOne({ username }))
+            return res.status(400).send({ message: "duplicateU" });
+        if (await User.findOne({ email }))
+            return res.status(400).send({ message: "duplicateE" });
 
-/*app.delete('/uczniowie/:id', async (req, res) => {
-    try{
-        if (!mongoose.Types.ObjectId.isValid(req.params.id)){
-            return res.status(400).json({message: 'Uczeń nie znaleziony'});
-        }
-        
-        const uczen = await Klasa.findByIdAndDelete(req.params.id);
-        if(!uczen) return res.status(404).json({message: 'Uczeń nie znaleziony'});
+        const user = new User({ username, email, password, country, city, street, houseNumber, flatNumber, postalCode, postalCity, phone });
+        await user.save();
 
-        res.json({message: 'Uczeń usunięty'})
+        const token = jwt.sign({ userId: user._id }, tokenKey);
+        res.cookie('token', token, { httpOnly: true }).send({ valid: true, user: user });
     } catch (err) {
-        console.error(err);
-        res.status(500).json({message: 'Wystąpił błąd serwera'});
+        res.status(500).json({ message: err.message });
     }
 });
 
-app.put('/uczniowie/:id', async (req, res) => {
+app.post('/login', async (req, res) => {
+    const { identifier, password } = req.body;
     try {
-        const {imie, nazwisko, klasa, data_urodzenia} = req.body;
-        const uczen = await Klasa.findById(req.params.id);
-        if(!uczen) return res.status(404).json({message: 'Uczeń nie znaleziony'});
+        const user = await User.findOne({ $or: [{ username: identifier }, { email: identifier }] });
+        if (!user) return res.status(400).send({ message: "invalid" });
 
-        uczen.imie = imie;
-        uczen.nazwisko = nazwisko;
-        uczen.klasa = klasa;
-        uczen.data_urodzenia = data_urodzenia;
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) return res.status(400).send({ message: "invalid" });
 
-        const updatedUczen = await uczen.save();
-        res.json(updatedUczen);
+        const token = jwt.sign({ userId: user._id }, tokenKey);
+        res.cookie('token', token, { httpOnly: true }).send({ valid: true, user: user });
     } catch (err) {
-        res.status(500).json({message: err.message})
+        res.status(500).json({ message: err.message });
     }
-})*/
+})
+
+app.post('/logout', (req, res) => {
+    res.clearCookie('token').send({ valid: false, user: null });
+})
+
+app.post('/auth', async (req, res) => {
+    const token = req.cookies.token;
+    if (!token) {
+        return res.send({ valid: false, user: null });
+    }
+
+    try {
+        const decoded = jwt.verify(token, tokenKey);
+        const user = await User.findOne({_id: decoded.userId});
+        res.send({ valid: true, user: user });
+    } catch (err) {
+        res.send({ valid: false, user: null });
+    }
+});
+
+
 
 app.listen(PORT, () => console.log(`Serwer działa na porcie ${PORT}`));

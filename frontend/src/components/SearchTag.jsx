@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { setQuery, setTag, setTagName } from "../assets/searchSlice"
+import { setCatOpen, setQuery, setTag, setTagName } from "../assets/searchSlice"
 import { Link } from "react-router-dom";
 
 
@@ -12,6 +12,7 @@ function SearchTag({text, tag})
                 dispatch(setTag(tag));
                 dispatch(setQuery(""));
                 dispatch(setTagName(text));
+                dispatch(setCatOpen(""));
                 }}>
                 {text}
             </Link>

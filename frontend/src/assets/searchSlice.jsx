@@ -6,7 +6,8 @@ export const searchSlice = createSlice({
         query: "",
         tag: "HERBATA",
         tagName: "HERBATY",
-        sort: 1
+        sort: 1,
+        catOpen: ""
     },
     reducers: {
         setQuery: (state, newQuery) => {
@@ -20,10 +21,13 @@ export const searchSlice = createSlice({
         },
         setSort: (state, newSort) => {
             state.sort = newSort.payload
-        }
+        },
+        setCatOpen: (state, newCatOpen) => {
+            state.catOpen = newCatOpen.payload
+        },
     }
 })
 
-export const {setQuery, setTag, setTagName, setSort} = searchSlice.actions;
+export const {setQuery, setTag, setTagName, setSort, setCatOpen} = searchSlice.actions;
 
 export default searchSlice.reducer;

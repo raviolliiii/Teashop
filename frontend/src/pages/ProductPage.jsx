@@ -24,7 +24,7 @@ function ProductPage() {
                 };
 
                 if (cookies.basket) {
-                    //increase quantity of duplicates
+                    //only increase quantity for duplicates
                     let dupeIndex = cookies.basket.findIndex(item => { return item.item.id == id });
                     console.log(dupeIndex);
                     if (dupeIndex == -1) {
@@ -51,7 +51,7 @@ function ProductPage() {
                     ]
                 };
                 if (cookies.basket) {
-                    //increase quantity of duplicates
+                    //only increase quantity for duplicates
                     let dupeIndex = cookies.basket.findIndex(item => { return item.item.id == id });
                     console.log(dupeIndex);
                     if (dupeIndex == -1) {
@@ -91,12 +91,11 @@ function ProductPage() {
     return (
         <div id="productPage" className="container-fluid mx-auto my-5">
             <div className="row m-5">
-                <div className="col-12 col-lg-4 mx-auto">
-                    <h2 className="text-center">{product.name}</h2>
-                    <img className="img-fluid mx-auto" src={getImageSrc()} alt="product" />
+                <div className="col-12 col-xl-4 mx-auto text-center">
+                    <h2>{product.name}</h2>
+                    <img className="img-fluid" src={getImageSrc()} alt="product" />
                 </div>
-                <div className="col-12 col-lg-7">
-                    <h3>Cena: {product.price ? product.price.toFixed(2) : ""} zł</h3>
+                <div className="col-12 col-xl-7 m-xl-4 p-xl-5">
                     <form onSubmit={handleSubmit}>
                         {product.tags && !product.tags.includes("AKCESORIA") ?
                             (

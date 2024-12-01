@@ -1,6 +1,27 @@
+import { setCatOpen } from "../assets/searchSlice";
 import SearchTag from "../components/searchTag";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 
 function NavBar() {
+    const catOpen = useSelector((state) => state.search.catOpen);
+    const dispatch = useDispatch();
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const handleToggle = (newCat) => () => {
+        if (isAnimating) 
+            return; 
+        
+        setIsAnimating(true); 
+        setTimeout(() => setIsAnimating(false), 300);
+
+        if(newCat == catOpen)
+            dispatch(setCatOpen(''));
+        else
+            dispatch(setCatOpen(newCat));
+        console.log(catOpen);
+    }
+    
     return (
         <div id="navBar" className="container-fluid m-0 p-0">
             <nav className="navbar navbar-expand-lg">
@@ -21,7 +42,9 @@ function NavBar() {
                                         data-bs-toggle="collapse"
                                         data-bs-target="#teaCollapse"
                                         aria-expanded="false"
+                                        onClick={() => handleToggle('tea')}
                                         role="button">
+
                                         Herbaty
 
                                     </a>
@@ -33,6 +56,7 @@ function NavBar() {
                                         data-bs-toggle="collapse"
                                         data-bs-target="#coffeeCollapse"
                                         aria-expanded="false"
+                                        onClick={() => handleToggle('coffee')}
                                         role="button">
 
                                         Kawy
@@ -45,6 +69,7 @@ function NavBar() {
                                         data-bs-toggle="collapse"
                                         data-bs-target="#herbsCollapse"
                                         aria-expanded="false"
+                                        onClick={() => handleToggle('herbs')}
                                         role="button">
 
                                         Zioła
@@ -57,6 +82,7 @@ function NavBar() {
                                         data-bs-toggle="collapse"
                                         data-bs-target="#accessoriesCollapse"
                                         aria-expanded="false"
+                                        onClick={() => handleToggle('accessories')}
                                         role="button">
 
                                         Akcesoria
@@ -66,7 +92,9 @@ function NavBar() {
                         </ul>
 
                         <div className="container-fluid" id="groupCollapse">
-                            <div id="teaCollapse" className="collapse border-top"
+                            <div 
+                                id="teaCollapse" 
+                                className={`collapse border-top ${catOpen == 'tea' ? 'show' : ''}`} 
                                 data-bs-parent="#groupCollapse">
 
                                 <div className="container-fluid row p-3">
@@ -102,7 +130,9 @@ function NavBar() {
                                 </div>
                             </div>
 
-                            <div id="coffeeCollapse" className="collapse border-top"
+                            <div 
+                                id="coffeeCollapse" 
+                                className={`collapse border-top ${catOpen == 'coffee' ? 'show' : ''}`} 
                                 data-bs-parent="#groupCollapse">
 
                                 <div className="container-fluid row p-3">
@@ -122,7 +152,9 @@ function NavBar() {
                                 </div>
                             </div>
 
-                            <div id="herbsCollapse" className="collapse border-top"
+                            <div 
+                                id="herbsCollapse" 
+                                className={`collapse border-top ${catOpen == 'herbs' ? 'show' : ''}`} 
                                 data-bs-parent="#groupCollapse">
 
                                 <div className="container-fluid row p-3">
@@ -138,7 +170,9 @@ function NavBar() {
                                 </div>
                             </div>
 
-                            <div id="accessoriesCollapse" className="collapse border-top"
+                            <div 
+                                id="accessoriesCollapse" 
+                                className={`collapse border-top ${catOpen == 'accessories' ? 'show' : ''}`} 
                                 data-bs-parent="#groupCollapse">
 
                                 <div className="container-fluid row p-3">
