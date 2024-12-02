@@ -48,7 +48,7 @@ function BasketPage() {
                     </div>
                 </div>
             ) : (
-                <div className="w-100 text-center m-5">
+                <div className="text-center m-5">
                     <h3>Twój koszyk jest pusty</h3>
                 </div>
             )}

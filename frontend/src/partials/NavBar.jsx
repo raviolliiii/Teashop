@@ -1,7 +1,7 @@
 import { setCatOpen } from "../assets/searchSlice";
 import SearchTag from "../components/searchTag";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useState} from "react";
 
 function NavBar() {
     const catOpen = useSelector((state) => state.search.catOpen);

@@ -16,6 +16,7 @@ import ProductPage from './pages/ProductPage.jsx'
 import BasketPage from './pages/BasketPage.jsx'
 import SummaryPage from './pages/SummaryPage.jsx'
 import RegisterPage from './pages/RegisterPage.jsx'
+import SuccessPage from './pages/SuccessPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { path: 'basket', element: <BasketPage /> },
       { path: 'summary', element: <SummaryPage /> },
       { path: 'register', element: <RegisterPage /> },
+      { path: 'success/:date', element: <SuccessPage/> },
       { path: '*', element: <NotFound /> }
     ]
   }

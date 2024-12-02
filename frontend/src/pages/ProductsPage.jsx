@@ -19,7 +19,6 @@ function ProductsPage() {
             .then(res => setProducts(res.data))
             .catch(err => console.log(err));
         
-            //setProducts(data);
     }, []);
 
     useEffect(() => {

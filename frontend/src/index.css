@@ -12,7 +12,15 @@
     border: #093824 !important;
     color: #093824 !important;
 }
-#searchBar button, #basketSummary button, #summaryPage button, #loginPage button, #loginPage button h4, #registerPage button, #registerPage button h4{
+#searchBar button, 
+#basketSummary button, 
+#summaryPage button, 
+#loginPage button, 
+#loginPage button h4, 
+#registerPage button, 
+#registerPage button h4, 
+#successPage button,
+#notFound button{
     background-color: #093824;
     color: #f8fce8;
 }
@@ -47,7 +55,15 @@ body{
     color: #093824;
 }
 
-#productsPage, #productPage, #basketPage, #summaryPage, #loginPage, #registerPage, #summaryPage{
+#productsPage, 
+#productPage, 
+#basketPage, 
+#summaryPage, 
+#loginPage, 
+#registerPage, 
+#summaryPage, 
+#successPage, 
+#notFound{
     min-height: 800px;
 }
 
@@ -100,6 +116,25 @@ body{
     border: #093824 1px solid;
     color: #093824;
 }
+
+.btn-group .btn {
+    background-color: #d7e2a1; 
+    border: 1px solid #093824; 
+    color: #093824; 
+}
+
+.btn-group .btn:hover {
+    background-color: #d1e377; 
+    border: 1px solid #093824; 
+    color: #093824; 
+}
+
+.btn-group .btn-check:checked + .btn {
+    background-color: #093824; 
+    border: 1px solid #093824; 
+    color: #f8fce8; 
+}
+
 
 /*
     #d7e2a1ff

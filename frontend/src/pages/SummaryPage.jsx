@@ -1,18 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, redirect, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCookies } from "react-cookie";
+import { useDispatch, useSelector } from "react-redux";
+import { setLogin } from "../assets/loginSlice";
 
 function SummaryPage() {
-    const [login, setLogin] = useState({ valid: false, user: null });
     const [cookies, setCookies] = useCookies(['basket']);
     const [price, setPrice] = useState(0);
     const [diffAddress, setDiffAddress] = useState(false);
     const navigate = useNavigate();
+    const login = useSelector((state) => state.login);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         axios.post('http://localhost:5000/auth', {}, { withCredentials: true })
-            .then(res => setLogin(res.data))
+            .then(res => dispatch(setLogin(res.data)))
             .catch(err => console.log(err));
     }, [])
 
@@ -38,6 +41,7 @@ function SummaryPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         let date = new Date();
+        let orderDate = (date.getDate()) + "-" + (date.getMonth() + 1) + "-" + (date.getFullYear());
         if (date.getDay() == 0)
             date.setDate(date.getDate() + 3)
         else if (date.getDay() == 6)
@@ -74,14 +78,15 @@ function SummaryPage() {
                 postalCity: e.target.postalCity2.value
             } : null,
             payment: e.target.payment.value,
-            expectedDate: (date.getDate() + 2) + "-" + (date.getMonth() + 1) + "-" + (date.getFullYear())
+            date: orderDate,
+            expectedDate: (date.getDate()) + "-" + (date.getMonth() + 1) + "-" + (date.getFullYear()),
+            status: "W trakcie realizacji"
         }
 
         axios.post('http://localhost:5000/placeOrder', newOrder, { withCredentials: true })
             .then(res => {
-                console.log(res),
                 setCookies('basket', null);
-                navigate("/orderSuccess");
+                navigate(`/success/${(date.getDate()) + "-" + (date.getMonth() + 1) + "-" + (date.getFullYear())}`);
             })
             .catch(err => console.log(err));
     }

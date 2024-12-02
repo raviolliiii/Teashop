@@ -1,11 +1,20 @@
-import { useDispatch } from "react-redux";
 import { setQuery, setSort, setTag, setTagName } from "../assets/searchSlice";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setLogin } from "../assets/loginSlice";
 
 
 function SearchBar() {
+    const login = useSelector((state) => state.login);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        axios.post('http://localhost:5000/auth', {}, { withCredentials: true })
+            .then(res => dispatch(setLogin(res.data)))
+            .catch(err => console.log(err));
+    }, [])
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -38,7 +47,7 @@ function SearchBar() {
                     <Link to={"/login"} className="Link col-2 col-lg-3 m-xl-2 m-1 text-middle">
                         <button className="btn w-100 fw-semibold">
                             <i className="bi bi-person-fill" />
-                            <span className="d-none d-lg-inline"> ZALOGUJ</span>
+                            <span className="d-none d-lg-inline"> {login.valid? "KONTO" : "ZALOGUJ"}</span>
                         </button>
                     </Link>
                     <Link to={"/basket"} className="Link col-2 col-lg-3 m-xl-2 m-1 text-middle">

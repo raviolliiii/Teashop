@@ -108,16 +108,34 @@ app.post('/placeOrder', async (req, res) => {
     console.log(order);
     const token = req.cookies.token;
     if (!token)
-        return res.status(400).send({message: "login invalid"});
+        return res.status(400).send({ message: "login invalid" });
 
-    try{
+    try {
         const decoded = jwt.verify(token, tokenKey);
-        const user = await User.findOne({_id: decoded.userId});
+        const user = await User.findOne({ _id: decoded.userId });
         user.orders = [...user.orders, order];
         await user.save();
-        res.send({message: "orderPlaced"})
+
+        user.password = undefined;
+        res.send({ valid: true, user: user });
     } catch (err) {
         res.send({ valid: false, user: null });
+    }
+})
+
+app.post('/updateUser', async (req, res) => {
+    const updates = req.body;
+    const token = req.cookies.token;
+    if (!token)
+        return res.status(400).send({ message: "login invalid" });
+    try {
+        const decoded = jwt.verify(token, tokenKey);
+        const user = await User.findByIdAndUpdate(decoded.userId, updates, { new: true });
+
+        user.password = undefined;
+        res.send({ valid: true, user: user });
+    } catch (err) {
+        res.send(err);
     }
 })
 
@@ -132,7 +150,7 @@ app.post('/auth', async (req, res) => {
 
     try {
         const decoded = jwt.verify(token, tokenKey);
-        const user = await User.findOne({_id: decoded.userId});
+        const user = await User.findOne({ _id: decoded.userId });
         user.password = undefined;
         res.send({ valid: true, user: user });
     } catch (err) {

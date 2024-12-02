@@ -1,15 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setLogin } from "../assets/loginSlice";
 
 function RegisterPage() {
     const navigate = useNavigate();
-    const [login, setLogin] = useState({ valid: false, user: null });
+    const login = useSelector((state) => state.login);
     const [errMessage, setErrMessage] = useState('');
+    const [isNotMatch, setIsNotMatch] = useState(false);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         axios.post('http://localhost:5000/auth', {}, { withCredentials: true })
-            .then(res => setLogin(res.data))
+            .then(res => dispatch(setLogin(res.data)))
             .catch(err => console.log(err));
     }, [])
 
@@ -20,28 +24,33 @@ function RegisterPage() {
 
     const handleRegister = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/register', {
-            username: e.target.username.value,
-            email: e.target.email.value,
-            password: e.target.password.value,
-            phone: e.target.phone.value,
-            country: e.target.country.value,
-            city: e.target.city.value,
-            street: e.target.street.value,
-            houseNumber: e.target.houseNumber.value,
-            flatNumber: e.target.flatNumber.value,
-            postalCode: e.target.postalCode.value,
-            postalCity: e.target.postalCity.value
-        }, {
-            withCredentials: true
-        })
-            .then(res => {
-                setLogin(res.data);
-                setErrMessage('');
+        if(e.target.password.value == e.target.passwordCheck.value){
+            setIsNotMatch(false);
+            axios.post('http://localhost:5000/register', {
+                username: e.target.username.value,
+                email: e.target.email.value,
+                password: e.target.password.value,
+                phone: e.target.phone.value,
+                country: e.target.country.value,
+                city: e.target.city.value,
+                street: e.target.street.value,
+                houseNumber: e.target.houseNumber.value,
+                flatNumber: e.target.flatNumber.value,
+                postalCode: e.target.postalCode.value,
+                postalCity: e.target.postalCity.value
+            }, {
+                withCredentials: true
             })
-            .catch(err => {
-                setErrMessage(err.response ? err.response.data.message : '');
-            });
+                .then(res => {
+                    dispatch(setLogin(res.data));
+                    setErrMessage('');
+                })
+                .catch(err => {
+                    setErrMessage(err.response ? err.response.data.message : '');
+                });
+        }
+        else
+            setIsNotMatch(true);
     }
 
     return (
@@ -68,6 +77,17 @@ function RegisterPage() {
                         className="form-control p-2 my-2"
                         placeholder="Hasło*"
                         name="password"
+                        type="password"
+                        minLength={8}
+                        required
+                    />
+                    <h6>Powtórz hasło:</h6>
+                    <input
+                        className="form-control p-2 my-2"
+                        placeholder="Powtórz hasło*"
+                        name="passwordCheck"
+                        type="password"
+                        minLength={8}
                         required
                     />
                     <h6>Numer telefonu:</h6>
@@ -102,14 +122,14 @@ function RegisterPage() {
                         <div className="col-6">
                             <input
                                 className="form-control p-2 my-2"
-                                placeholder="Nr Domu"
+                                placeholder="Nr domu"
                                 name="houseNumber"
                             />
                         </div>
                         <div className="col-6">
                             <input
                                 className="form-control p-2 my-2"
-                                placeholder="Nr Mieszkania"
+                                placeholder="Nr mieszkania"
                                 name="flatNumber"
                             />
                         </div>
@@ -127,6 +147,12 @@ function RegisterPage() {
                                 name="postalCity"
                             />
                         </div>
+                        <div className="form-check col-12 m-3">
+                                <input className="form-check-input" type="checkbox" required/>
+                                <label className="form-check-label">
+                                    Akceptuję regulamin serwisu
+                                </label>
+                            </div>
                     </div>
                     {errMessage == 'duplicateU' ? (
                         <div className="alert alert-danger text-center" role="alert">
@@ -138,6 +164,11 @@ function RegisterPage() {
                             Podany e-mail jest już zajęty
                         </div>
                     ) : ''}
+                    {isNotMatch ? (
+                            <div className="alert alert-danger text-center" role="alert">
+                                Hasła nie są identyczne
+                            </div>
+                        ) : ''}
                     <button className="col-12 btn my-2 p-2 text-middle fw-semibold" type="submit">
                         <h4>ZAREJESTRUJ SIĘ</h4>
                     </button>
