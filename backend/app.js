@@ -79,6 +79,7 @@ app.post('/register', async (req, res) => {
         await user.save();
 
         const token = jwt.sign({ userId: user._id }, tokenKey);
+        user.password = undefined;
         res.cookie('token', token, { httpOnly: true }).send({ valid: true, user: user });
     } catch (err) {
         res.status(500).json({ message: err.message });
@@ -95,9 +96,28 @@ app.post('/login', async (req, res) => {
         if (!isMatch) return res.status(400).send({ message: "invalid" });
 
         const token = jwt.sign({ userId: user._id }, tokenKey);
+        user.password = undefined;
         res.cookie('token', token, { httpOnly: true }).send({ valid: true, user: user });
     } catch (err) {
         res.status(500).json({ message: err.message });
+    }
+})
+
+app.post('/placeOrder', async (req, res) => {
+    const order = req.body;
+    console.log(order);
+    const token = req.cookies.token;
+    if (!token)
+        return res.status(400).send({message: "login invalid"});
+
+    try{
+        const decoded = jwt.verify(token, tokenKey);
+        const user = await User.findOne({_id: decoded.userId});
+        user.orders = [...user.orders, order];
+        await user.save();
+        res.send({message: "orderPlaced"})
+    } catch (err) {
+        res.send({ valid: false, user: null });
     }
 })
 
@@ -107,13 +127,13 @@ app.post('/logout', (req, res) => {
 
 app.post('/auth', async (req, res) => {
     const token = req.cookies.token;
-    if (!token) {
+    if (!token)
         return res.send({ valid: false, user: null });
-    }
 
     try {
         const decoded = jwt.verify(token, tokenKey);
         const user = await User.findOne({_id: decoded.userId});
+        user.password = undefined;
         res.send({ valid: true, user: user });
     } catch (err) {
         res.send({ valid: false, user: null });

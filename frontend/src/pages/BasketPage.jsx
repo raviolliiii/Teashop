@@ -9,16 +9,18 @@ function BasketPage() {
 
     useEffect(() => {
         let newPrice = 0;
+        if(cookies.basket)
+        {
+            cookies.basket.forEach(element => {
+                if (element.item.tags.includes("AKCESORIA")) {
+                    newPrice += element.item.price * element.quantity;
+                } else {
+                    newPrice += element.item.price * element.quantity[0] + element.item.price * element.quantity[1] * 2 + element.item.price * element.quantity[2] * 20;
+                }
+            });
+            setPrice(newPrice.toFixed(2));
+        }
 
-        cookies.basket.forEach(element => {
-            if (element.item.tags.includes("AKCESORIA")) {
-                newPrice += element.item.price * element.quantity;
-            } else {
-                newPrice += element.item.price * element.quantity[0] + element.item.price * element.quantity[1] * 2 + element.item.price * element.quantity[2] * 20;
-            }
-        });
-
-        setPrice(newPrice.toFixed(2));
     }, [cookies.basket]);
 
     return (

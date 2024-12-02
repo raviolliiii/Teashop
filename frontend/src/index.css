@@ -47,7 +47,7 @@ body{
     color: #093824;
 }
 
-#productsPage, #productPage, #basketPage, #summaryPage, #loginPage, #registerPage{
+#productsPage, #productPage, #basketPage, #summaryPage, #loginPage, #registerPage, #summaryPage{
     min-height: 800px;
 }
 

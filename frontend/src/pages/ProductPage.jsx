@@ -26,7 +26,6 @@ function ProductPage() {
                 if (cookies.basket) {
                     //only increase quantity for duplicates
                     let dupeIndex = cookies.basket.findIndex(item => { return item.item.id == id });
-                    console.log(dupeIndex);
                     if (dupeIndex == -1) {
                         setCookie('basket', JSON.stringify([...cookies.basket, order]));
                     }
@@ -53,7 +52,6 @@ function ProductPage() {
                 if (cookies.basket) {
                     //only increase quantity for duplicates
                     let dupeIndex = cookies.basket.findIndex(item => { return item.item.id == id });
-                    console.log(dupeIndex);
                     if (dupeIndex == -1) {
                         setCookie('basket', JSON.stringify([...cookies.basket, order]));
                     }
@@ -69,7 +67,6 @@ function ProductPage() {
                     setCookie('basket', JSON.stringify([order]));
             }
         }
-        console.log(cookies)
     };
 
     const handleInput = (e) => {
