@@ -182,30 +182,94 @@ function LoginPage() {
                     {selected == 1 ? (
                         <div className="m-5">
                             <div className="mx-auto row m-5 p-5 rounded greenBox">
-                                <table className="table w-100 mx-auto table-striped rounded-2 overflow-hidden mx-5">
-                                    <thead>
-                                        <tr>
-                                            <th>Zamówienie</th>
-                                            <th>Data zamówienia</th>
-                                            <th>Adres</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="table-group-divider">
-                                        {login.user.orders.map(order => (
-                                            <td>
-                                                {order.products.map(product => (
-                                                    <p className="m-0 p-0">{product.item.name}</p>
+                                {login.user.orders.length > 0 ?
+                                    (
+                                        <table className="table w-100 mx-auto table-striped table-bordered rounded-2 overflow-hidden mx-5">
+                                            <thead>
+                                                <tr className="text-center">
+                                                    <th><h4>Zamówienie</h4></th>
+                                                    <th><h4>Data zamówienia</h4></th>
+                                                    <th><h4>Adres</h4></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className="table-group-divider">
+                                                {login.user.orders.map(order => (
+                                                    <tr>
+                                                        <td>
+                                                            {order.products.map(product => (
+                                                                <p className="m-0 p-0 d-flex justify-content-between">
+                                                                    <span>{product.item.name}</span>
+                                                                    <span>{product.item.tags.includes("AKCESORIA") ? (
+                                                                        <>
+                                                                            {product.quantity} sztuk - {(Number(product.item.price) * product.quantity).toFixed(2)} zł
+                                                                        </>
+                                                                    ) : (
+                                                                        <>
+                                                                            {product.quantity[0] > 0 ? (
+                                                                                <>{product.quantity[0]}x50g-{(Number(product.item.price) * product.quantity[0]).toFixed(2)}zł<br /></>
+                                                                            ) : ""}
+                                                                            {product.quantity[1] > 0 ? (
+                                                                                <>{product.quantity[1]}x100g-{(Number(product.item.price) * product.quantity[1] * 2).toFixed(2)}zł<br /></>
+                                                                            ) : ""}
+                                                                            {product.quantity[2] > 0 ? (
+                                                                                <>{product.quantity[2]}x1kg-{(Number(product.item.price) * product.quantity[2] * 20).toFixed(2)}zł<br /></>
+                                                                            ) : ""}
+                                                                        </>
+                                                                    )}</span>
+                                                                </p>
+                                                            ))}
+                                                            <h6 className="m-0 p-0 d-flex justify-content-between">
+                                                                <span>Dostawa:</span>
+                                                                <span>{order.price > 80 ? "darmowa" : "11.00zł"}</span>
+                                                            </h6>
+                                                            <h5 className="m-0 p-0 d-flex justify-content-between">
+                                                                <span>Razem:</span>
+                                                                <span>{order.price > 80 ? order.price : (Number(order.price) + 11)}zł</span>
+                                                            </h5>
+                                                        </td>
+                                                        <td>
+                                                            <p className="m-0 p-0 d-flex justify-content-between">
+                                                                <span>Data zamówienia:</span>
+                                                                <span>{order.date}</span>
+                                                            </p>
+                                                            <p className="m-0 p-0 d-flex justify-content-between">
+                                                                <span>Przewidywana data dostawy:</span>
+                                                                <span>{order.expectedDate}</span>
+                                                            </p>
+                                                        </td>
+                                                        <td>
+                                                            {order.address2 ? <h5 className="m-0 p-0  text-end">Adres do faktury</h5> : ""}
+                                                            <p className="m-0 p-0 text-end">{order.address1.country}</p>
+                                                            <p className="m-0 p-0 text-end">{order.address1.city}</p>
+                                                            <p className="m-0 p-0 text-end">{order.address1.street} {order.address1.houseNumber} {order.address1.flatNumber}</p>
+                                                            <p className="m-0 p-0 text-end">{order.address1.postalCode} {order.address1.postalCity}</p>
+                                                            {order.address2 ? (
+                                                                <>
+                                                                    <h5 className="m-0 p-0 text-end">Adres wysyłki</h5>
+                                                                    <p className="m-0 p-0 text-end">{order.address1.country}</p>
+                                                                    <p className="m-0 p-0 text-end">{order.address1.city}</p>
+                                                                    <p className="m-0 p-0 text-end">{order.address1.street} {order.address1.houseNumber} {order.address1.flatNumber}</p>
+                                                                    <p className="m-0 p-0 text-end">{order.address1.postalCode} {order.address1.postalCity}</p>
+                                                                </>
+                                                            ) : ""}
+
+                                                        </td>
+                                                    </tr>
                                                 ))}
-                                            </td>
-                                        ))}
-                                    </tbody>
-                                </table>
+                                            </tbody>
+                                        </table>
+                                    ) : (
+                                    <h4 className="text-center">Brak zamówień w trakcie realizacji</h4>
+                                )}
+
                             </div>
                         </div>
                     ) : ""}
                     {selected == 2 ? (
-                        <div>
-                            C
+                        <div className="m-5">
+                            <div className="mx-auto row m-5 p-5 rounded greenBox">
+                                <h4 className="text-center">Brak zrealizowanych zamówień</h4>
+                            </div>
                         </div>
                     ) : ""}
                 </div>

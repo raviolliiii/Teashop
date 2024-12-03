@@ -112,8 +112,8 @@ app.post('/placeOrder', async (req, res) => {
 
     try {
         const decoded = jwt.verify(token, tokenKey);
-        const user = await User.findOne({ _id: decoded.userId });
-        user.orders = [...user.orders, order];
+        const user = await User.findById(decoded.userId);
+        user.orders.push(order)
         await user.save();
 
         user.password = undefined;
