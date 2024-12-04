@@ -97,12 +97,12 @@ function SummaryPage() {
                 <div id="summaryPage" className="container">
                     <div className="mx-auto row m-5 px-5 rounded greenBox">
                         <h4 className="mt-5">1. Produkty:</h4>
-                        <table className="table w-100 mx-auto table-striped rounded-2 overflow-hidden mx-5">
+                        <table className="table w-100 mx-auto table-striped table-bordered rounded-2 overflow-hidden mx-5">
                             <thead>
-                                <tr>
+                                <tr className="text-center">
                                     <th>Nazwa</th>
-                                    <th>Ilość</th>
-                                    <th>Cena</th>
+                                    <th width="30%">Ilość</th>
+                                    <th width="20%">Cena</th>
                                 </tr>
                             </thead>
                             <tbody className="table-group-divider">
@@ -110,12 +110,30 @@ function SummaryPage() {
                                     <tr key={element.item.id}>
                                         <td>{element.item.name}</td>
                                         <td>{element.item.tags.includes("AKCESORIA") ? (
-                                            `Sztuk: ${element.quantity}`
+                                            <>
+                                                <span>Opakowań 50g:</span>
+                                                <span>{element.quantity[0]}</span>
+                                            </>
                                         ) : (
                                             <>
-                                                {(element.quantity[0] > 0) ? (<>Opakowań 50g: {element.quantity[0]}<br /></>) : ""}
-                                                {(element.quantity[1] > 0) ? (<>Opakowań 100g: {element.quantity[1]}<br /></>) : ""}
-                                                {(element.quantity[2] > 0) ? (<>Opakowań 1kg: {element.quantity[2]}<br /></>) : ""}
+                                                {(element.quantity[0] > 0) ? (
+                                                    <div className="d-flex justify-content-between">
+                                                        <span>Opakowań 50g:</span>
+                                                        <span>{element.quantity[0]}<br /></span>
+                                                    </div>
+                                                ) : ""}
+                                                {(element.quantity[1] > 0) ? (
+                                                    <div className="d-flex justify-content-between">
+                                                        <span>Opakowań 100g:</span>
+                                                        <span>{element.quantity[1]}<br /></span>
+                                                    </div>
+                                                ) : ""}
+                                                {(element.quantity[2] > 0) ? (
+                                                    <div className="d-flex justify-content-between">
+                                                        <span>Opakowań 1kg:</span>
+                                                        <span>{element.quantity[2]}<br /></span>
+                                                    </div>
+                                                ) : ""}
                                             </>
                                         )}</td>
                                         <td>{element.item.tags.includes("AKCESORIA") ? (
@@ -128,12 +146,12 @@ function SummaryPage() {
                             </tbody>
                             <tfoot className="table-group-divider">
                                 <tr>
-                                    <td colSpan={2}>Produkty</td>
-                                    <td>{price}&nbsp;zł</td>
+                                    <td colSpan={2} className="fw-semibold">Produkty</td>
+                                    <td className="fw-semibold">{price}&nbsp;zł</td>
                                 </tr>
                                 <tr>
-                                    <td colSpan={2}>Dostawa</td>
-                                    <td>{price > 80 ? "Darmowa" : "11.00 zł"}</td>
+                                    <td colSpan={2} className="fw-semibold">Dostawa</td>
+                                    <td className="fw-semibold">{price > 80 ? "Darmowa" : "11.00 zł"}</td>
                                 </tr>
                                 <tr>
                                     <td colSpan={2}>
@@ -312,7 +330,7 @@ function SummaryPage() {
                                         </div>
                                     </div>
                                 </> : ""}
-                            <h4 className="mt-5">{diffAddress ? "4." : "3."} Sposób płatności</h4>
+                            <h4 className="mt-5">{diffAddress ? "4." : "3."} Sposób płatności:</h4>
                             <select name="payment" className="form-select" required>
                                 <option value="Blik">Blik</option>
                                 <option value="Karta">Karta</option>

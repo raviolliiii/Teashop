@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-//import data from "../assets/json.json"
 import { setSort } from "../assets/searchSlice";
 import { Link } from "react-router-dom";
 

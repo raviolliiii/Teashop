@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
+import { Link } from "react-router-dom";
 
 function BasketItem({ item, quantity }) {
     const [cookies, setCookies] = useCookies(['basket']);
@@ -29,6 +30,9 @@ function BasketItem({ item, quantity }) {
             value = value.replace(/^0+/, '');
         }
         e.target.value = value;
+
+        if(e.target.value > 100)
+            e.target.value = 100;
     };
 
     const handleBlur = (e) => {
@@ -80,7 +84,7 @@ function BasketItem({ item, quantity }) {
                 <img className="img-fluid" src={getImageSrc(item)} />
             </div>
             <div className="col-8 col-xl-3 my-3">
-                <h4>{item.name}</h4>
+                <Link className="Link" to={"/product/" + item.id}><h4>{item.name}</h4></Link>
                 <h5>{item.price.toFixed(2)} zł</h5>
             </div>
             <div className="col-12 col-xl-4">
@@ -93,6 +97,7 @@ function BasketItem({ item, quantity }) {
                             name="items1"
                             type="number"
                             min={0}
+                            max={100}
                             onInput={handleInput}
                             onBlur={handleBlur}
                         />
@@ -107,6 +112,7 @@ function BasketItem({ item, quantity }) {
                                 name="items2"
                                 type="number"
                                 min={0}
+                                max={100}
                                 onInput={handleInput}
                                 onBlur={handleBlur}
                             />
@@ -122,6 +128,7 @@ function BasketItem({ item, quantity }) {
                                 name="items3"
                                 type="number"
                                 min={0}
+                                max={100}
                                 onInput={handleInput}
                                 onBlur={handleBlur}
                             />

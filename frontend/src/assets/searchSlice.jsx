@@ -7,7 +7,7 @@ export const searchSlice = createSlice({
         tag: "HERBATA",
         tagName: "HERBATY",
         sort: 1,
-        catOpen: ""
+        catOpen: -1
     },
     reducers: {
         setQuery: (state, newQuery) => {

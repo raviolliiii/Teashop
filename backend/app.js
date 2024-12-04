@@ -36,7 +36,6 @@ app.get('/tea', async (req, res) => {
     try {
         const tea = await TeaModel.find();
         res.json(tea);
-        console.log(tea);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
@@ -61,9 +60,19 @@ const userSchema = new mongoose.Schema({
 })
 
 userSchema.pre('save', async function (next) {
-    this.password = await bcrypt.hash(this.password, 10);
-    next();
-})
+    if (!this.isModified('password')) {
+        return next();
+    }
+
+    try {
+        const salt = await bcrypt.genSalt(10);
+        this.password = await bcrypt.hash(this.password, salt);
+        next();
+    } catch (err) {
+        next(err);
+    }
+});
+
 
 const User = mongoose.model('user', userSchema);
 
@@ -105,7 +114,6 @@ app.post('/login', async (req, res) => {
 
 app.post('/placeOrder', async (req, res) => {
     const order = req.body;
-    console.log(order);
     const token = req.cookies.token;
     if (!token)
         return res.status(400).send({ message: "login invalid" });
@@ -116,28 +124,39 @@ app.post('/placeOrder', async (req, res) => {
         user.orders.push(order)
         await user.save();
 
-        user.password = undefined;
-        res.send({ valid: true, user: user });
+        const updatedUser = user.toObject(); 
+        delete updatedUser.password;
+        
+        res.send({ valid: true, user: updatedUser });
     } catch (err) {
         res.send({ valid: false, user: null });
     }
-})
+});
+
 
 app.post('/updateUser', async (req, res) => {
     const updates = req.body;
     const token = req.cookies.token;
-    if (!token)
+    if (!token) {
         return res.status(400).send({ message: "login invalid" });
+    }
     try {
         const decoded = jwt.verify(token, tokenKey);
-        const user = await User.findByIdAndUpdate(decoded.userId, updates, { new: true });
+        const userId = decoded.userId;
 
-        user.password = undefined;
-        res.send({ valid: true, user: user });
+        if (updates.password) {
+            delete updates.password;
+        }
+        const user = await User.findByIdAndUpdate(userId, { $set: updates }, { new: true });
+
+        const updatedUser = user.toObject(); 
+        delete updatedUser.password;
+        res.send({ valid: true, user: updatedUser });
     } catch (err) {
-        res.send(err);
+        res.status(500).send(err);
     }
-})
+});
+
 
 app.post('/logout', (req, res) => {
     res.clearCookie('token').send({ valid: false, user: null });
@@ -151,8 +170,11 @@ app.post('/auth', async (req, res) => {
     try {
         const decoded = jwt.verify(token, tokenKey);
         const user = await User.findOne({ _id: decoded.userId });
-        user.password = undefined;
-        res.send({ valid: true, user: user });
+
+        const updatedUser = user.toObject(); 
+        delete updatedUser.password;
+
+        res.send({ valid: true, user: updatedUser });
     } catch (err) {
         res.send({ valid: false, user: null });
     }

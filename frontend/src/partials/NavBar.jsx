@@ -1,27 +1,26 @@
+import { useEffect } from "react";
 import { setCatOpen } from "../assets/searchSlice";
 import SearchTag from "../components/searchTag";
 import { useDispatch, useSelector } from "react-redux";
-import { useState} from "react";
+import { useLocation } from 'react-router-dom';
 
 function NavBar() {
     const catOpen = useSelector((state) => state.search.catOpen);
     const dispatch = useDispatch();
-    const [isAnimating, setIsAnimating] = useState(false);
+    const location = useLocation();
 
-    const handleToggle = (newCat) => () => {
-        if (isAnimating) 
-            return; 
-        
-        setIsAnimating(true); 
-        setTimeout(() => setIsAnimating(false), 300);
+    useEffect(() => {
+        dispatch(setCatOpen(-1));
+        window.scrollTo(0, 0);
+    }, [location])
 
-        if(newCat == catOpen)
-            dispatch(setCatOpen(''));
+    const handleToggle = (e) => {
+        if(e === catOpen)
+            dispatch(setCatOpen(-1));
         else
-            dispatch(setCatOpen(newCat));
-        console.log(catOpen);
+            dispatch(setCatOpen(e));
     }
-    
+
     return (
         <div id="navBar" className="container-fluid m-0 p-0">
             <nav className="navbar navbar-expand-lg">
@@ -39,10 +38,8 @@ function NavBar() {
                             <li className="nav-item">
                                 <h5>
                                     <a className="nav-link dropdown-toggle active"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#teaCollapse"
                                         aria-expanded="false"
-                                        onClick={() => handleToggle('tea')}
+                                        onClick={() => handleToggle(0)}
                                         role="button">
 
                                         Herbaty
@@ -53,10 +50,8 @@ function NavBar() {
                             <li className="nav-item">
                                 <h5>
                                     <a className="nav-link dropdown-toggle active"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#coffeeCollapse"
                                         aria-expanded="false"
-                                        onClick={() => handleToggle('coffee')}
+                                        onClick={() => handleToggle(1)}
                                         role="button">
 
                                         Kawy
@@ -66,10 +61,8 @@ function NavBar() {
                             <li className="nav-item">
                                 <h5>
                                     <a className="nav-link dropdown-toggle active"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#herbsCollapse"
                                         aria-expanded="false"
-                                        onClick={() => handleToggle('herbs')}
+                                        onClick={() => handleToggle(2)}
                                         role="button">
 
                                         Zioła
@@ -79,10 +72,8 @@ function NavBar() {
                             <li className="nav-item">
                                 <h5>
                                     <a className="nav-link dropdown-toggle active"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#accessoriesCollapse"
                                         aria-expanded="false"
-                                        onClick={() => handleToggle('accessories')}
+                                        onClick={() => handleToggle(3)}
                                         role="button">
 
                                         Akcesoria
@@ -94,7 +85,7 @@ function NavBar() {
                         <div className="container-fluid" id="groupCollapse">
                             <div 
                                 id="teaCollapse" 
-                                className={`collapse border-top ${catOpen == 'tea' ? 'show' : ''}`} 
+                                className={`collapse border-top ${catOpen == 0 ? 'show' : ''}`} 
                                 data-bs-parent="#groupCollapse">
 
                                 <div className="container-fluid row p-3">
@@ -132,7 +123,7 @@ function NavBar() {
 
                             <div 
                                 id="coffeeCollapse" 
-                                className={`collapse border-top ${catOpen == 'coffee' ? 'show' : ''}`} 
+                                className={`collapse border-top ${catOpen == 1 ? 'show' : ''}`} 
                                 data-bs-parent="#groupCollapse">
 
                                 <div className="container-fluid row p-3">
@@ -154,7 +145,7 @@ function NavBar() {
 
                             <div 
                                 id="herbsCollapse" 
-                                className={`collapse border-top ${catOpen == 'herbs' ? 'show' : ''}`} 
+                                className={`collapse border-top ${catOpen == 2 ? 'show' : ''}`} 
                                 data-bs-parent="#groupCollapse">
 
                                 <div className="container-fluid row p-3">
@@ -172,7 +163,7 @@ function NavBar() {
 
                             <div 
                                 id="accessoriesCollapse" 
-                                className={`collapse border-top ${catOpen == 'accessories' ? 'show' : ''}`} 
+                                className={`collapse border-top ${catOpen == 3 ? 'show' : ''}`} 
                                 data-bs-parent="#groupCollapse">
 
                                 <div className="container-fluid row p-3">

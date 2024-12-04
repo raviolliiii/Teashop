@@ -33,7 +33,7 @@ function BasketPage() {
                     {cookies.basket.map(item => (
                         <BasketItem key={item.item.id} item={item.item} quantity={item.quantity}></BasketItem>
                     ))}
-                    <div id="basketSummary" className="col-12 col-xl-4 row d-flex justify-content-end ms-auto m-5 p-3 rounded">
+                    <div id="basketSummary" className="col-12 col-xl-5 row d-flex justify-content-end ms-auto m-5 p-3 rounded">
                         <h4 className="col-6">Produkty:</h4>
                         <h4 className="col-6 text-end">{price}&nbsp;zł</h4>
                         <h4 className="col-6">Dostawa:</h4>

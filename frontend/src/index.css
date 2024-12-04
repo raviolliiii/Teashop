@@ -3,7 +3,7 @@
     font-size: 12px;
 }
 
-#searchBar, #searchBar a{
+#searchBar, #searchBar a, #footer{
     background-color: #156f48 !important;
     color: #d7e2a1 !important;
 }
@@ -65,6 +65,7 @@ body{
 #successPage, 
 #notFound{
     min-height: 800px;
+    flex: 1;
 }
 
 #productPage h2, #productPage td, #productPage th, #productPage table{

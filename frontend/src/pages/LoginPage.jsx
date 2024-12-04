@@ -184,7 +184,7 @@ function LoginPage() {
                             <div className="mx-auto row m-5 p-5 rounded greenBox">
                                 {login.user.orders.length > 0 ?
                                     (
-                                        <table className="table w-100 mx-auto table-striped table-bordered rounded-2 overflow-hidden mx-5">
+                                        <table className="table w-100 mx-auto table-striped table-bordered rounded-3 overflow-hidden mx-5">
                                             <thead>
                                                 <tr className="text-center">
                                                     <th><h4>Zamówienie</h4></th>
@@ -193,11 +193,11 @@ function LoginPage() {
                                                 </tr>
                                             </thead>
                                             <tbody className="table-group-divider">
-                                                {login.user.orders.map(order => (
-                                                    <tr>
+                                                {login.user.orders.map((order, index) => (
+                                                    <tr className="table-group-divider" key={index}>
                                                         <td>
-                                                            {order.products.map(product => (
-                                                                <p className="m-0 p-0 d-flex justify-content-between">
+                                                            {order.products.map((product, index) => (
+                                                                <p key={index} className="m-0 p-0 d-flex justify-content-between">
                                                                     <span>{product.item.name}</span>
                                                                     <span>{product.item.tags.includes("AKCESORIA") ? (
                                                                         <>
