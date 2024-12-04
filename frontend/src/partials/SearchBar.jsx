@@ -35,7 +35,9 @@ function SearchBar() {
         <nav id="searchBar" className="navbar border-bottom d-flex justify-content-center">
             <div className="container-lg row">
                 <div className="col-3 col-xxl-6">
-                    <Link to={"/"} className="navbar-brand m-xl-2" type="button" onClick={resetSearch}>Blossom Tea</Link>
+                    <Link to={"/"} className="navbar-brand m-0 p-2" type="button" onClick={resetSearch}>
+                        <img src="img/logo.png" className="img-fluid m-0"/>
+                    </Link>
                 </div>
                 <div className="col-9 col-xxl-6 row">
                     <form className="d-flex col-7 col-lg-5 m-xl-2" onSubmit={handleSearch}>
